@@ -1,0 +1,112 @@
+/* BootcampTimings.css */
+.hover-row:hover {
+  background-color: #f9fafb;
+}
+
+.section-card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.section-card:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.mode-button.active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Column width styles */
+.col-subject {
+  width: 33%;
+}
+
+.col-timing {
+  width: 22.3%;
+}
+
+.col-date {
+  width: 22.3%;
+}
+
+.col-location {
+  width: 22.3%;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+  }
+  
+  .tabs-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .tab-button {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .mode-toggle {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .mode-button {
+    font-size: 0.8rem;
+  }
+  
+  .px-6 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  /* Improve table display on mobile */
+  th, td {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .flex.items-center {
+    flex-wrap: wrap;
+  }
+  
+  /* Adjust subject icons for mobile */
+  .h-8.w-8 {
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 0.6rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .flex.items-center.mb-6 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .flex.items-center.mb-6 h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .bg-gray-100.rounded-lg {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .mode-button {
+    flex: 1;
+    text-align: center;
+  }
+}
