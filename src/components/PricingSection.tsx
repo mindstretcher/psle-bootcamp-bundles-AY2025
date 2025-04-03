@@ -228,7 +228,7 @@ const PricingSection = () => {
                 
                 {/* In Every Bundle Section */}
                 <div className="mt-4 mb-2">
-                  <h4 className="text-xs uppercase tracking-wider text-slate-500 font-medium">In Every Bundle</h4>
+                  <h4 className="text-xs uppercase tracking-wider text-slate-500 font-medium">Included</h4>
                 </div>
                 
                 {/* Welcome Pack */}
