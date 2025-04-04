@@ -23,7 +23,7 @@ const HeroSection = () => {
             className={`py-1.5 px-3 md:py-2 md:px-4 text-sm md:text-base font-medium bg-blue-50 border-blue-200 text-educational-blue rounded-full inline-flex items-center gap-1 md:gap-1.5 ${isMobile ? 'flex-wrap justify-center' : ''}`}
           >
             <Percent className="h-3.5 w-3.5 md:h-4 md:w-4" /> 
-            <b>Enjoy 15 to 20% off</b> with our Bootcamp Bundles 
+            <b>Enjoy 15 to 25% off</b> with our Bootcamp Bundles 
             <Percent className="h-3.5 w-3.5 md:h-4 md:w-4" />
           </Badge>
         </div>
