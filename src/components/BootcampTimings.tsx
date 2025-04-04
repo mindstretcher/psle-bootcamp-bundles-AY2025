@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './BootcampTimings.css';
 
+// Format Badge Component
+const FormatBadge = ({ format }) => (
+  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 ml-2">
+    {format}
+  </span>
+);
+
 const BootcampTimings: React.FC = () => {
   // State for active tab and mode
   const [activeTab, setActiveTab] = useState('power-up');
@@ -44,16 +51,16 @@ const BootcampTimings: React.FC = () => {
 
   const ModeButton = ({ mode, label }) => (
     <button
-       className={`mode-button px-4 py-1.5 rounded-md text-sm font-medium transition ${
-           activeMode === mode
-           ? 'bg-white shadow text-blue-600 active'
-           : 'text-gray-500'
-       }`}
-       onClick={() => setActiveMode(mode)}
-     >
-       {label}
-     </button>
- );
+      className={`mode-button px-4 py-1.5 rounded-md text-sm font-medium transition ${
+        activeMode === mode
+          ? 'bg-white shadow text-blue-600 active'
+          : 'text-gray-500'
+      }`}
+      onClick={() => setActiveMode(mode)}
+    >
+      {label}
+    </button>
+  );
 
   return (
     <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-slate-50">
@@ -87,21 +94,23 @@ const BootcampTimings: React.FC = () => {
                 <h2 className="text-xl font-semibold mr-4">Power Up Workshops</h2>
                 {/* Mode Toggle */}
                 <div className="bg-gray-100 rounded-lg p-1 flex items-center">
-                  <ModeButton mode="online" label="Online" />
+                  <ModeButton mode="online" label="Online Webinar" />
                   <ModeButton mode="physical" label="Physical (Limited Slots)" />
                 </div>
               </div>
 
               {/* Physical mode notice */}
               {activeMode === 'physical' && (
-                  <div id="physical-notice" className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
-                      <p><span className="font-medium">Note:</span> You may attend each subject at either Tampines Junction or Toa Payoh HDB Hub (e.g., English at Tampines, Maths at Toa Payoh). For an additional $50 per subject, you can also join the online sessions (same bootcamp materials) — ideal for reinforcing learning.</p>
-                  </div>
+                <div id="physical-notice" className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
+                  <p>
+                    <span className="font-medium">Note:</span> You may attend each subject at either Tampines or Toa Payoh. For an additional $50 per subject, you can also join the online sessions (with the same materials) to reinforce learning. The online add-on is only available for subjects selected in the physical format.
+                  </p>
+                </div>
               )}
 
               <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
                 <div className="table-container overflow-x-auto">
-                  <table className="w-full min-w-[600px]"> {/* Added min-width for smaller screens */}
+                  <table className="w-full min-w-[600px"> {/* Added min-width for smaller screens */}
                     <thead>
                       <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
                         <th className="px-6 py-4 font-medium col-subject">Subject</th>
@@ -176,99 +185,99 @@ const BootcampTimings: React.FC = () => {
 
             {/* Parent Debriefing Section */}
             <div className="mb-12">
-                  <h2 className="text-xl font-semibold mb-6">Parent Debriefing</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Session</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4 font-medium">Science, Maths</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">10:00am - 12:45pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">21-Jun (Sat)</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 transition">
-                          <td className="px-6 py-4 font-medium">English, Chinese</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">2:30pm - 5:15pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">21-Jun (Sat)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+              <h2 className="text-xl font-semibold mb-6">Parent Debriefing <FormatBadge format="Online Webinar" /></h2>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Session</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4 font-medium">Science, Maths</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">10:00am - 12:45pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">21-Jun (Sat)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4 font-medium">English, Chinese</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">2:30pm - 5:15pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">21-Jun (Sat)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
 
             {/* Motivational Segment Section */}
-              <div className="mb-12">
-                  <h2 className="text-xl font-semibold mb-6">Motivational Segment</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Session</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 transition">
-                          <td className="px-6 py-4 font-medium">Reach for the Skies</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">2:00pm - 4:00pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">22-Jun (Sun)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold mb-6">Motivational Segment <FormatBadge format="Online Webinar" /></h2>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Session</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4 font-medium">Reach for the Skies</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">2:00pm - 4:00pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">22-Jun (Sun)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
 
-              {/* Practice Papers Live Q&A Section */}
-              <div>
-                  <h2 className="text-xl font-semibold mb-6">Practice Papers Live Q&A</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Subject</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">
-                              <SubjectIcon initial="E" color="#3b82f6" name="English" />
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">12, 19-Jul (Sat)</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">
-                            <SubjectIcon initial="M" color="#ec4899" name="Maths" />
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">10, 17-Jul (Thu)</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 transition">
-                          <td className="px-6 py-4">
-                              <SubjectIcon initial="S" color="#10b981" name="Science" />
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">8, 15-Jul (Tue)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+            {/* Practice Papers Live Q&A Section */}
+            <div>
+              <h2 className="text-xl font-semibold mb-6">Practice Papers Live Q&A <FormatBadge format="Online Webinar" /></h2>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Subject</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">
+                          <SubjectIcon initial="E" color="#3b82f6" name="English" />
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">12, 19-Jul (Sat)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">
+                          <SubjectIcon initial="M" color="#ec4899" name="Maths" />
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">10, 17-Jul (Thu)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4">
+                          <SubjectIcon initial="S" color="#10b981" name="Science" />
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">8, 15-Jul (Tue)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
           </div>
         )}
 
@@ -276,7 +285,7 @@ const BootcampTimings: React.FC = () => {
         {activeTab === 'last-lap' && (
           <div id="last-lap-section" className="bootcamp-content">
             <div className="mb-12">
-              <h2 className="text-xl font-semibold mb-6">Last Lap Workshops</h2>
+              <h2 className="text-xl font-semibold mb-6">Last Lap Workshops <FormatBadge format="Online Webinar" /></h2>
               <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
                 <div className="table-container overflow-x-auto">
                   <table className="w-full min-w-[500px]">
@@ -335,89 +344,94 @@ const BootcampTimings: React.FC = () => {
         {activeTab === 'english-oral' && (
           <div id="english-oral-section" className="bootcamp-content">
             {/* Introduction Webinar Section */}
-              <div className="mb-12">
-                  <h2 className="text-xl font-semibold mb-6">Introduction Webinar</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Session</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 transition">
-                          <td className="px-6 py-4">Helping Your Child Ace PSLE English Oral Exam</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">23-May (Fri)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold mb-6">Introduction Webinar <FormatBadge format="Online Webinar" /></h2>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Session</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4">Helping Your Child Ace PSLE English Oral Exam</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">23-May (Fri)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
 
-              {/* PSLE English Oral Pack Section */}
-              <div className="mb-12">
-                  <h2 className="text-xl font-semibold mb-6">PSLE English Oral Pack</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Session</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">PSLE English Oral Workshop</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">9am - 4pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">8 OR 15-Jun (Sun)</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">1-to-1 English Physical Oral Mock Tests (2x)</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">1 hour</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">To be scheduled in early June, based on parent-teacher availability, across Central, East and West locations, with an online option available</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">Live demonstration, mass consultations and additional teachings</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">6, 13, 20, 27-Jul (Sun)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+            {/* PSLE English Oral Pack Section */}
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold mb-6">PSLE English Oral Pack <FormatBadge format="Online Webinar" /></h2>
+              <div className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
+                <p>
+                  <span className="font-medium">Note:</span> 1-to-1 oral mock tests will be conducted physically, with online option available as well.
+                </p>
               </div>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Session</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">PSLE English Oral Workshop</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">9am - 4pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">8 OR 15-Jun (Sun)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">1-to-1 English Physical Oral Mock Tests</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">1 hour</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">Mock tests will run on 20, 23–27 June 2025. Booking opens in early June and will be arranged based on parent-teacher availability across Central, East, West, with an online option available.</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">Live demonstration, mass consultations and additional teachings</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">6, 13, 20, 27-Jul (Sun)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
 
-              {/* PSLE English Oral SBC Workshops Section */}
-              <div className="mb-12">
-                  <h2 className="text-xl font-semibold mb-6">PSLE SBC Workshops</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Session</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 transition">
-                          <td className="px-6 py-4">PSLE SBC Workshops</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:30pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">18, 25-Jul, 1-Aug (Fri)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+            {/* PSLE English Oral SBC Workshops Section */}
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold mb-6">PSLE SBC Workshops <FormatBadge format="Online Webinar" /></h2>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Session</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4">PSLE SBC Workshops</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">18, 25-Jul, 1-Aug (Fri)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
           </div>
         )}
 
@@ -425,84 +439,89 @@ const BootcampTimings: React.FC = () => {
         {activeTab === 'chinese-oral' && (
           <div id="chinese-oral-section" className="bootcamp-content">
             {/* Introduction Webinar Section */}
-              <div className="mb-12">
-                  <h2 className="text-xl font-semibold mb-6">Introduction Webinar</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Session</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 transition">
-                          <td className="px-6 py-4">Helping Your Child Ace PSLE Chinese Oral Exam</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">2pm - 3:30pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">24-May (Sat)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold mb-6">Introduction Webinar <FormatBadge format="Online Webinar" /></h2>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Session</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4">Helping Your Child Ace PSLE Chinese Oral Exam</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">2pm - 3:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">24-May (Sat)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
 
-              {/* PSLE Chinese Oral Pack Section */}
-              <div className="mb-12">
-                  <h2 className="text-xl font-semibold mb-6">PSLE Chinese Oral Pack</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Session</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">PSLE Chinese Oral Workshop</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">9am - 4pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">14-Jun (Sat)</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">1-to-1 Chinese Physical Oral Mock Tests (2x)</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">1 hour</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">To be scheduled in early June, based on parent-teacher availability, across Central, East and West locations, with an online option available</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+            {/* PSLE Chinese Oral Pack Section */}
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold mb-6">PSLE Chinese Oral Pack <FormatBadge format="Online Webinar" /></h2>
+              <div className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
+                <p>
+                  <span className="font-medium">Note:</span> 1-to-1 oral mock tests will be conducted physically, with online option available as well.
+                </p>
               </div>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Session</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">PSLE Chinese Oral Workshop</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">9am - 4pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">14-Jun (Sat)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">1-to-1 Chinese Physical Oral Mock Tests</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">1 hour</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">Mock tests will run on 20, 23–27 June 2025. Booking opens in early June and will be arranged based on parent-teacher availability across Central, East, West, with an online option available.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
 
-              {/* PSLE Chinese Oral Final Sprint Section */}
-              <div className="mb-12">
-                  <h2 className="text-xl font-semibold mb-6">PSLE Final Sprint Workshop</h2>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Session</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 transition">
-                          <td className="px-6 py-4">PSLE Final Sprint Workshop</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 10pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">2-Aug (Sat)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+            {/* PSLE Chinese Oral Final Sprint Section */}
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold mb-6">PSLE Final Sprint Workshop <FormatBadge format="Online Webinar" /></h2>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Session</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4">PSLE Final Sprint Workshop</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 10pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">2-Aug (Sat)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
           </div>
         )}
 
@@ -510,57 +529,58 @@ const BootcampTimings: React.FC = () => {
         {activeTab === 'qa-consults' && (
           <div id="qa-consults-section" className="bootcamp-content">
             <div className="mb-12">
-              <h2 className="text-xl font-semibold mb-6">Q&A Consultations</h2>
-                  <div className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
-                  <p><span className="font-medium">Note:</span> Q&A Consultations are only available as part of any Bootcamp Bundles.</p>
-                  </div>
-                  <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                  <div className="table-container overflow-x-auto">
-                      <table className="w-full min-w-[400px]">
-                      <thead>
-                          <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                          <th className="px-6 py-4 font-medium col-subject">Subject</th>
-                          <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                          <th className="px-6 py-4 font-medium col-date">Date</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">
-                              <SubjectIcon initial="E" color="#3b82f6" name="English" />
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">20 Sep (Fri)</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">
-                              <SubjectIcon initial="M" color="#ec4899" name="Maths" />
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">18 Sep (Thu)</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                          <td className="px-6 py-4">
-                              <SubjectIcon initial="S" color="#10b981" name="Science" />
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">15 Sep (Mon)</td>
-                          </tr>
-                          <tr className="hover:bg-gray-50 transition">
-                          <td className="px-6 py-4">
-                            <SubjectIcon initial="C" color="#f59e0b" name="Chinese" />
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">17 Sep (Wed)</td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  </div>
+              <h2 className="text-xl font-semibold mb-6">Q&A Consultations <FormatBadge format="Online Webinar" /></h2>
+              <div className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
+                <p>
+                  <span className="font-medium">Note:</span> Q&A Consultations are only available as part of any Bootcamp Bundles.
+                </p>
               </div>
+              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                <div className="table-container overflow-x-auto">
+                  <table className="w-full min-w-[400px]">
+                    <thead>
+                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
+                        <th className="px-6 py-4 font-medium col-subject">Subject</th>
+                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
+                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">
+                          <SubjectIcon initial="E" color="#3b82f6" name="English" />
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">20 Sep (Fri)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">
+                          <SubjectIcon initial="M" color="#ec4899" name="Maths" />
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">18 Sep (Thu)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
+                        <td className="px-6 py-4">
+                          <SubjectIcon initial="S" color="#10b981" name="Science" />
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">15 Sep (Mon)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4">
+                          <SubjectIcon initial="C" color="#f59e0b" name="Chinese" />
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">17 Sep (Wed)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         )}
-
       </div>
     </section>
   );

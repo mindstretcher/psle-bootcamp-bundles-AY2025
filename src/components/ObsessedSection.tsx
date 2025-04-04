@@ -11,8 +11,8 @@ const ObsessedSection = () => {
     description: "Our 2025 PSLE Bootcamp materials have been completely refreshed with new materials, and also updated to align with 2025 MOE syllabus changes."
   }, {
     icon: <Users className="h-6 w-6 text-educational-blue" />,
-    title: "Physical & Online Formats Available",
-    description: "This year, we’re reintroducing our physical bootcamp format for PSLE Power Up, blending lecture-style teaching with small-group workshops (about 10 students per class) for better interaction and guidance."
+    title: "Physical & Online Webinar Formats",
+    description: "This year, we’re reintroducing our physical bootcamp format for PSLE Power Up, blending lecture-style teaching with small-group sessions (about 10 students per class) for better interaction and guidance."
   }, {
     icon: <Award className="h-6 w-6 text-educational-blue" />,
     title: "Highly-Experienced PSLE Master Teachers",

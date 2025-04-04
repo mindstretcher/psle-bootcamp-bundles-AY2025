@@ -14,9 +14,9 @@ const TeacherSection = () => {
       icon: <BookOpen className="h-6 w-6 text-educational-blue" />
     },
     {
-      name: "Lim Wei Lun",
+      name: "Lim Weilun",
       subject: "Head of Academics",
-      description: "Wei Lun is the Deputy Academic Director and a highly sought-after Master Teacher for Mathematics. A top student from Raffles Institution and winner of the Prime Minister’s Book Prize, he holds double degrees from Columbia and a Master’s from Cambridge. He has helped countless students secure placements in top secondary schools.",
+      description: "Weilun is the Head of Academics at Mind Stretcher and a highly sought-after Master Teacher for Mathematics. A top student from Raffles Institution and winner of the Prime Minister’s Book Prize, he holds double degrees from Columbia and a Master’s from Cambridge. He has helped countless students secure placements in top secondary schools.",
       image: "/lovable-uploads/e298ba1a-dd88-458b-a6fd-063c354492fb.png",
       icon: <Book className="h-6 w-6 text-educational-blue" />
     },

@@ -83,7 +83,7 @@ const FAQSection = () => {
       question: "I need to change my bootcamp run timings from Run 2 (Tampines) to Run 3 (Toa Payoh), or vice versa. Can I still do so after registration?",
       answer: (
         <div>
-          <p>Yes, you can request a change between the physical runs (Run 2 and Run 3).</p>
+          <p>Yes, you can request a change between the physical runs (Run 2 and Run 3), subject to availability.</p>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Simply email our Events Team at <a href="mailto:events@mindstretcher.com" className="text-blue-600 hover:underline">events@mindstretcher.com</a>, and we'll assist you as soon as possible.</li>
             <li>Do note that the two runs are held at different venues, so please ensure you're able to make the necessary arrangements for your child to attend.</li>
