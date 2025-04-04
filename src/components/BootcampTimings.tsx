@@ -59,7 +59,6 @@ const BootcampTimings: React.FC = () => {
     <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-slate-50">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <div className="text-blue-500 text-xs font-medium uppercase tracking-widest mb-3">Journey to PSLE</div>
           <h1 className="text-4xl font-bold mb-4">Bootcamp Dates & Timings</h1>
           <p className="text-gray-500 max-w-lg mx-auto text-sm">
             View the bootcamps' schedules and details.
@@ -96,7 +95,7 @@ const BootcampTimings: React.FC = () => {
               {/* Physical mode notice */}
               {activeMode === 'physical' && (
                   <div id="physical-notice" className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
-                      <p><span className="font-medium">Note:</span> You may choose either Tampines Junction or Toa Payoh HDB Hub for each subject. For example, you can attend English at Tampines and Maths at Toa Payoh. For an additional $50 per subject, you can also attend the online sessions for subjects you've selected physically.</p>
+                      <p><span className="font-medium">Note:</span> You may attend each subject at either Tampines Junction or Toa Payoh HDB Hub (e.g., English at Tampines, Maths at Toa Payoh). For an additional $50 per subject, you can also join the online sessions (same bootcamp materials) — ideal for reinforcing learning.</p>
                   </div>
               )}
 
@@ -119,11 +118,11 @@ const BootcampTimings: React.FC = () => {
                         <td className="px-6 py-4">
                           <SubjectIcon initial="E" color="#3b82f6" name="English" />
                         </td>
-                        <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'online' ? '' : 'hidden'}`} rowSpan={4}>8:15am - 4:30pm</td>
+                        <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'online' ? '' : 'hidden'}`} rowSpan={4}>8:30am - 4:30pm</td>
                         <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'physical' ? '' : 'hidden'}`} rowSpan={4}>8:30am - 4:30pm</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>3-Jun (Mon)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>11-Jun (Tue)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>17-Jun (Mon)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>4-Jun (Wed)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>11-Jun (Wed)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>17-Jun (Tue)</td>
                       </tr>
                       {/* Maths */}
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
@@ -131,9 +130,9 @@ const BootcampTimings: React.FC = () => {
                           <SubjectIcon initial="M" color="#ec4899" name="Maths" />
                         </td>
                         {/* Timing cells covered by rowspan */}
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>4-Jun (Tue)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>12-Jun (Wed)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>18-Jun (Tue)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>5-Jun (Thu)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>12-Jun (Thu)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>16-Jun (Mon)</td>
                       </tr>
                       {/* Science */}
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
@@ -141,9 +140,9 @@ const BootcampTimings: React.FC = () => {
                           <SubjectIcon initial="S" color="#10b981" name="Science" />
                         </td>
                         {/* Timing cells covered by rowspan */}
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>5-Jun (Wed)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>10-Jun (Mon)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>19-Jun (Wed)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>3-Jun (Tue)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>10-Jun (Tue)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>18-Jun (Wed)</td>
                       </tr>
                       {/* Chinese */}
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
@@ -151,20 +150,20 @@ const BootcampTimings: React.FC = () => {
                           <SubjectIcon initial="C" color="#f59e0b" name="Chinese" />
                         </td>
                         {/* Timing cells covered by rowspan */}
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>6-Jun (Thu)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>13-Jun (Thu)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>20-Jun (Thu)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>2-Jun (Mon)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>9-Jun (Mon)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>19-Jun (Thu)</td>
                       </tr>
                       {/* Higher Chinese */}
                       <tr className="hover:bg-gray-50 transition">
                         <td className="px-6 py-4">
                           <SubjectIcon initial="HC" color="#8b5cf6" name="Higher Chinese" />
                         </td>
-                        <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'online' ? '' : 'hidden'}`}>8:15am - 12pm</td>
+                        <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'online' ? '' : 'hidden'}`}>8:30am - 12pm</td>
                         <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'physical' ? '' : 'hidden'}`}>8:30am - 12pm</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>7-Jun (Fri)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>14-Jun (Fri)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>21-Jun (Fri)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>6-Jun (Fri)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>13-Jun (Fri)</td>
+                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>20-Jun (Fri)</td>
                       </tr>
                     </tbody>
                   </table>
@@ -245,21 +244,19 @@ const BootcampTimings: React.FC = () => {
                           <td className="px-6 py-4">
                               <SubjectIcon initial="E" color="#3b82f6" name="English" />
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
+                          <td className="px-6 py-4 text-sm text-gray-600" rowSpan={3}>7:30pm - 9:00pm</td>
                           <td className="px-6 py-4 text-sm text-blue-600 font-medium">12, 19-Jul (Sat)</td>
                           </tr>
                           <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                           <td className="px-6 py-4">
                             <SubjectIcon initial="M" color="#ec4899" name="Maths" />
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
                           <td className="px-6 py-4 text-sm text-blue-600 font-medium">10, 17-Jul (Thu)</td>
                           </tr>
                           <tr className="hover:bg-gray-50 transition">
                           <td className="px-6 py-4">
                               <SubjectIcon initial="S" color="#10b981" name="Science" />
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:00pm</td>
                           <td className="px-6 py-4 text-sm text-blue-600 font-medium">8, 15-Jul (Tue)</td>
                           </tr>
                       </tbody>
@@ -371,12 +368,12 @@ const BootcampTimings: React.FC = () => {
                           <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                           <td className="px-6 py-4">PSLE English Oral Workshop</td>
                           <td className="px-6 py-4 text-sm text-gray-600">9am - 4pm</td>
-                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">8, 15-Jun (Sun)</td>
+                          <td className="px-6 py-4 text-sm text-blue-600 font-medium">8 OR 15-Jun (Sun)</td>
                           </tr>
                           <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                           <td className="px-6 py-4">1-to-1 English Oral Mock Tests (2x)</td>
                           <td className="px-6 py-4 text-sm text-gray-600">1 hour</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">To be scheduled based on parent and teacher availability</td>
+                          <td className="px-6 py-4 text-sm text-gray-600">To be scheduled in early June based on parent and teacher availability</td>
                           </tr>
                           <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                           <td className="px-6 py-4">Live demonstration, mass consultations and additional teachings</td>
@@ -466,7 +463,7 @@ const BootcampTimings: React.FC = () => {
                           <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                           <td className="px-6 py-4">1-to-1 Chinese Oral Mock Tests (2x)</td>
                           <td className="px-6 py-4 text-sm text-gray-600">1 hour</td>
-                          <td className="px-6 py-4 text-sm text-gray-600">To be scheduled based on parent and teacher availability</td>
+                          <td className="px-6 py-4 text-sm text-gray-600">To be scheduled in early June based on parent and teacher availability</td>
                           </tr>
                       </tbody>
                       </table>
@@ -524,28 +521,25 @@ const BootcampTimings: React.FC = () => {
                           <td className="px-6 py-4">
                               <SubjectIcon initial="E" color="#3b82f6" name="English" />
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
+                          <td className="px-6 py-4 text-sm text-gray-600" rowSpan={4}>7pm - 9:30pm</td>
                           <td className="px-6 py-4 text-sm text-blue-600 font-medium">20 Sep (Fri)</td>
                           </tr>
                           <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                           <td className="px-6 py-4">
-                              <SubjectIcon initial="M" color="#ef4444" name="Mathematics" /> {/* Corrected color from HTML */}
+                              <SubjectIcon initial="M" color="#ec4899" name="Mathematics" />
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
                           <td className="px-6 py-4 text-sm text-blue-600 font-medium">18 Sep (Thu)</td>
                           </tr>
                           <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                           <td className="px-6 py-4">
                               <SubjectIcon initial="S" color="#10b981" name="Science" />
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
                           <td className="px-6 py-4 text-sm text-blue-600 font-medium">15 Sep (Mon)</td>
                           </tr>
                           <tr className="hover:bg-gray-50 transition">
                           <td className="px-6 py-4">
                             <SubjectIcon initial="C" color="#f59e0b" name="Chinese" />
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
                           <td className="px-6 py-4 text-sm text-blue-600 font-medium">17 Sep (Wed)</td>
                           </tr>
                       </tbody>
