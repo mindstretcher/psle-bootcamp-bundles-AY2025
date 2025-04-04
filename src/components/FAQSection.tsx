@@ -26,7 +26,7 @@ const FAQSection = () => {
               </ul>
             </li>
             <li><strong>PSLE Online Q&A Consultation:</strong> Live 2.5-hour subject-specific Q&A sessions in the week leading up to PSLE.</li>
-            <li><strong>PSLE-Standard Mock Papers:</strong> To assess readiness and build familiarity with PSLE exam formats.</li>
+            <li><strong>PSLE Mock Papers:</strong> To assess readiness and build familiarity with PSLE exam formats.</li>
             <li><strong>PSLE Study Planners & Checklists:</strong> 4-month PSLE Study Plan and Topic Checklists to keep students on track.</li>
           </ul>
         </div>
@@ -102,6 +102,15 @@ const FAQSection = () => {
       )
     },
     {
+      question: "Do I need to complete the PSLE mock papers ahead of time?",
+      answer: (
+        <div>
+          <p>Yes, we strongly encourage students to complete the PSLE mock papers before the Power Up Bootcamp begins. These papers are provided as part of any Bootcamp Bundles purchased, and are also included for all students registered for the PSLE Power Up Bootcamp.</p>
+          <p className="mt-2">During the bootcamp, we’ll be going through selected challenging or commonly misunderstood questions from the papers, so having them completed in advance will help your child follow the discussion more effectively and gain maximum value from the walkthroughs.</p>
+        </div>
+      )
+    },
+    {
       question: "If I'm unable to attend any of the sessions after signing up, or if any sessions are already over at the point of signing up, will recordings be provided?",
       answer: "Absolutely! Recordings of all registered webinars and online bootcamps will be made available to all registrants till the end of this academic year."
     },
@@ -133,6 +142,7 @@ const FAQSection = () => {
               <AccordionTrigger className="px-6 py-4 text-left text-educational-dark hover:bg-slate-100 hover:no-underline flex items-center w-full">
                 <span className="flex-1 text-left">{faq.question}</span>
               </AccordionTrigger>
+
               <AccordionContent className="px-6 pb-4 pt-2 text-slate-600">
                 {faq.answer}
               </AccordionContent>

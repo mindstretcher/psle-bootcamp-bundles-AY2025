@@ -472,7 +472,10 @@ const PricingSection = () => {
                 </div>
 
                 {/* English Oral Bootcamp */}
-                <div className="bg-white p-3 rounded-md shadow-sm mb-3">
+                <div className="bg-white p-3 rounded-md shadow-sm mb-3 relative overflow-hidden">
+                  <div className="absolute top-2 right-2 bg-[#4f46e5] text-white text-xs py-0.5 px-2 rounded-md shadow-sm">
+                    Added
+                  </div>
                   <div className="flex items-start">
                     <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                       <Check className="h-3 w-3 text-green-600" />

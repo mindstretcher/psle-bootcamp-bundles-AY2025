@@ -7,6 +7,20 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const TeacherSection = () => {
   const teachers = [
     {
+      name: "Moses Soh",
+      subject: "Deputy CEO",
+      description: "Moses is the Deputy CEO of Mind Stretcher and a President’s Scholar with degrees from Wharton, Princeton and Stanford. A former Rafflesian and four-time RI All-Round Excellence Award winner, he is passionate about leveraging innovation to help students grow and thrive through education.",
+      image: "/lovable-uploads/moses-soh-square.jpg",
+      icon: <BookOpen className="h-6 w-6 text-educational-blue" />
+    },
+    {
+      name: "Lim Wei Lun",
+      subject: "Head of Academics",
+      description: "Wei Lun is the Deputy Academic Director and a highly sought-after Master Teacher for Mathematics. A top student from Raffles Institution and winner of the Prime Minister’s Book Prize, he holds double degrees from Columbia and a Master’s from Cambridge. He has helped countless students secure placements in top secondary schools.",
+      image: "/lovable-uploads/e298ba1a-dd88-458b-a6fd-063c354492fb.png",
+      icon: <Book className="h-6 w-6 text-educational-blue" />
+    },
+    {
       name: "Mavis Tan",
       subject: "Head of Primary English",
       description: "As the Head of English and a former MOE educator, Mavis brings over 14 years of experience preparing students for PSLE. Known for her engaging, dramatic delivery and effervescent style, she's guided numerous cohorts to excel in PSLE English over the past 7 years at our bootcamps.",
@@ -19,13 +33,6 @@ const TeacherSection = () => {
       description: "With over 30 years of teaching experience, Mrs Shum is a highly respected English Master Teacher. She specialises in helping students master comprehension techniques, writing strategies and oral communication skills, helping thousands achieve remarkable PSLE results.",
       image: "/lovable-uploads/15d333d0-ce78-4515-9edd-43d183be0d74.png",
       icon: <MessageSquare className="h-6 w-6 text-educational-blue" />
-    },
-    {
-      name: "Lim Wei Lun",
-      subject: "Head of Academics",
-      description: "Wei Lun is the Deputy Academic Director and a highly sought-after Master Teacher for Mathematics. A top student from Raffles Institution with education from Columbia and Cambridge Universities, he has helped countless students secure placements in top secondary schools.",
-      image: "/lovable-uploads/e298ba1a-dd88-458b-a6fd-063c354492fb.png",
-      icon: <Book className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "James Wong",
@@ -99,7 +106,7 @@ const TeacherSection = () => {
                   </div>
                   <h3 className="text-xl font-bold text-educational-dark mb-1 font-display">{teacher.name}</h3>
                   <p className="text-educational-blue font-medium mb-3">
-                    {teacher.subject.includes("Head of") || teacher.subject.includes("Director") 
+                    {teacher.subject.includes("Head of") || teacher.subject.includes("Director") || teacher.subject.includes("Deputy") 
                       ? teacher.subject 
                       : `${teacher.subject} Specialist`}
                   </p>

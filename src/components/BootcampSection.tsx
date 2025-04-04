@@ -6,7 +6,7 @@ const BootcampSection = () => {
   const bootcamps = [{
     title: "PSLE Power Up Bootcamp",
     description: "Our highly-popular PSLE Power Up Bootcamp is designed to provide structured revision and intensive practice for PSLE success. With 40+ hours of lessons, 300+ pages of latest 2025 revision materials, and live Q&A walkthroughs, students gain a comprehensive understanding of PSLE topics, question trends and exam strategies. A motivational segment and parent briefings ensure both students and parents are well-prepared.",
-    formats: ["Physical (Limited Seats)", "Online"],
+    formats: ["Online", "Physical (Limited Slots)"],
     objectives: ["Practise with our refreshed PSLE Power Up revision materials and PSLE practice papers", "Reinforce understanding of PSLE topics and concepts", "Gain familiarity with trending PSLE questions and common errors", "Hone PSLE question analysis and answering techniques", "Receive teaching support with our live Q&A walkthroughs and parent briefings", "Stay motivated with our exclusive student motivational segment"],
     imageSrc: "/lovable-uploads/power-up-bc.png",
     category: 'bootcamp',
@@ -37,9 +37,9 @@ const BootcampSection = () => {
     showLearnMore: true
   }, {
     title: "PSLE Revision Resources",
-    description: "The Welcome Pack contains 3 essential components to power your child's PSLE revision:\n\n1️⃣ Revision Books\n2️⃣ Study Planners & Checklists\n3️⃣ PSLE-Standard Mock Papers.\n\nAll materials are developed by our experienced academic team to align with the latest PSLE format and requirements.",
+    description: "The Welcome Pack contains 3 essential components to power your child's PSLE revision:\n\n1️⃣ Revision Books\n2️⃣ Study Planners & Checklists\n3️⃣ PSLE Mock Papers.\n\nAll materials are developed by our experienced academic team to align with the latest PSLE format and requirements.",
     formats: [],
-    objectives: ["Access subject-specific revision books with key concepts, worked examples and practice questions", "Follow our structured 4-month PSLE Study Plan with week-by-week revision guidance", "Track progress with comprehensive PSLE Topic Checklists covering all examinable components", "Practice with PSLE-standard mock papers to build exam confidence and time management skills", "Standard Bundle includes 5 titles, while Booster & Mega Bundles include all 8 titles (with 3 additional English Oral resources)"],
+    objectives: ["Access subject-specific revision books with key concepts, worked examples and practice questions", "Follow our structured 4-month PSLE Study Plan with week-by-week revision guidance", "Track progress with comprehensive PSLE Topic Checklists covering all examinable components", "Practice with PSLE mock papers to build exam confidence and time management skills", "Standard Bundle includes 5 titles, while Booster & Mega Bundles include all 8 titles (with 3 additional English Oral resources)"],
     imageSrc: "/lovable-uploads/psle-resources.png",
     category: 'welcome-pack',
     showLearnMore: false,

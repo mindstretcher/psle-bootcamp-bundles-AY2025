@@ -33,7 +33,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
 }) => {
   const [expanded, setExpanded] = useState(false);
   
-  // Category-based styles
+  // Category-based styles - text only, no borders
   const categoryTextColor = {
     'bootcamp': 'text-educational-blue',
     'welcome-pack': 'text-teal-600',
@@ -101,7 +101,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
             <ul className="space-y-2">
               {objectives.map((objective, i) => (
                 <li key={i} className="flex items-start">
-                  <span className="flex-shrink-0 inline-block w-1.5 h-1.5 rounded-full bg-educational-blue/80 mr-2 mt-1.5"></span>
+                  <span className="flex-shrink-0 inline-flex items-center justify-center w-1.5 h-1.5 rounded-full bg-educational-blue mr-2 mt-1.5"></span>
                   <span className="text-slate-700 text-sm">{objective}</span>
                 </li>
               ))}
