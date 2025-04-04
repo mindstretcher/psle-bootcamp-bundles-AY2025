@@ -1,0 +1,12 @@
+# Handle all text files as UTF-8 and normalize to LF on commit
+* text=auto eol=lf
+
+# Ensure specific files keep LF (optional - you can be more specific if needed)
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf

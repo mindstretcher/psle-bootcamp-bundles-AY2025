@@ -23,9 +23,9 @@ const PricingSection = () => {
           mega: { regular: 1820, discounted: 1365 }
         },
         physical: {
-          standard: { regular: 1110, discounted: 944 },
+          standard: { regular: 1110, discounted: 943.50 },
           booster: { regular: 1590, discounted: 1272 },
-          mega: { regular: 2010, discounted: 1508 }
+          mega: { regular: 2010, discounted: 1507.50 }
         }
       },
       '4': {
@@ -58,22 +58,22 @@ const PricingSection = () => {
         online: {
           standard: { regular: 1020, discounted: 867 },
           booster: { regular: 1650, discounted: 1320 },
-          mega: { regular: 2190, discounted: 1643 }
+          mega: { regular: 2190, discounted: 1642.50 }
         },
         physical: {
-          standard: { regular: 1210, discounted: 1029 },
+          standard: { regular: 1210, discounted: 1028.50 },
           booster: { regular: 1840, discounted: 1472 },
           mega: { regular: 2380, discounted: 1785 }
         }
       },
       '4': {
         online: {
-          standard: { regular: 1150, discounted: 978 },
+          standard: { regular: 1150, discounted: 977.50 },
           booster: { regular: 1780, discounted: 1424 },
           mega: { regular: 2320, discounted: 1740 }
         },
         physical: {
-          standard: { regular: 1390, discounted: 1182 },
+          standard: { regular: 1390, discounted: 1181.50 },
           booster: { regular: 2020, discounted: 1616 },
           mega: { regular: 2560, discounted: 1920 }
         }
@@ -82,15 +82,20 @@ const PricingSection = () => {
         online: {
           standard: { regular: 1440, discounted: 1224 },
           booster: { regular: 2070, discounted: 1656 },
-          mega: { regular: 2610, discounted: 1958 }
+          mega: { regular: 2610, discounted: 1957.50 }
         },
         physical: {
           standard: { regular: 1760, discounted: 1496 },
           booster: { regular: 2390, discounted: 1912 },
-          mega: { regular: 2930, discounted: 2198 }
+          mega: { regular: 2930, discounted: 2197.50 }
         }
       }
     }
+  };
+
+  // Helper function to format price
+  const formatPrice = (price: number) => {
+    return price.toFixed(2);
   };
 
   // Helper function to update format for a specific bundle
@@ -262,12 +267,14 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              <div className="text-center mb-4">
-                <div className="text-sm text-slate-500 line-through mb-1">
-                  Regular: ${pricingData[studentType][subjectCount][formats.standard].standard.regular}
+              <div className="text-center mb-6">
+                <div className="text-sm text-slate-500">
+                  <span className="line-through">
+                    ${formatPrice(pricingData[studentType][subjectCount][formats.standard].standard.regular)}
+                  </span>
                 </div>
-                <div className="text-3xl font-bold">
-                  ${pricingData[studentType][subjectCount][formats.standard].standard.discounted}
+                <div className="text-3xl font-bold text-educational-dark">
+                  ${formatPrice(pricingData[studentType][subjectCount][formats.standard].standard.discounted)}
                 </div>
               </div>
 
@@ -389,12 +396,14 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              <div className="text-center mb-4">
-                <div className="text-sm text-slate-500 line-through mb-1">
-                  Regular: ${pricingData[studentType][subjectCount][formats.booster].booster.regular}
+              <div className="text-center mb-6">
+                <div className="text-sm text-slate-500">
+                  <span className="line-through">
+                    ${formatPrice(pricingData[studentType][subjectCount][formats.booster].booster.regular)}
+                  </span>
                 </div>
-                <div className="text-3xl font-bold">
-                  ${pricingData[studentType][subjectCount][formats.booster].booster.discounted}
+                <div className="text-3xl font-bold text-educational-dark">
+                  ${formatPrice(pricingData[studentType][subjectCount][formats.booster].booster.discounted)}
                 </div>
               </div>
 
@@ -531,12 +540,14 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              <div className="text-center mb-4">
-                <div className="text-sm text-slate-500 line-through mb-1">
-                  Regular: ${pricingData[studentType][subjectCount][formats.mega].mega.regular}
+              <div className="text-center mb-6">
+                <div className="text-sm text-slate-500">
+                  <span className="line-through">
+                    ${formatPrice(pricingData[studentType][subjectCount][formats.mega].mega.regular)}
+                  </span>
                 </div>
-                <div className="text-3xl font-bold">
-                  ${pricingData[studentType][subjectCount][formats.mega].mega.discounted}
+                <div className="text-3xl font-bold text-educational-dark">
+                  ${formatPrice(pricingData[studentType][subjectCount][formats.mega].mega.discounted)}
                 </div>
               </div>
 
