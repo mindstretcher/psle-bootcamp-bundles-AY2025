@@ -238,9 +238,9 @@ const PricingSection = () => {
                       <Check className="h-3 w-3 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Welcome Pack</h4>
+                      <h4 className="font-medium text-sm">PSLE Revision Resources</h4>
                       <span className="text-xs bg-slate-50 text-slate-600 px-2 py-0.5 rounded inline-block mt-1">
-                        PSLE Revision Resources
+                        Welcome Pack
                       </span>
                     </div>
                   </div>
@@ -355,7 +355,7 @@ const PricingSection = () => {
                 
                 {/* In Every Bundle Section */}
                 <div className="mt-4 mb-2">
-                  <h4 className="text-xs uppercase tracking-wider text-slate-500 font-medium">In Every Bundle</h4>
+                  <h4 className="text-xs uppercase tracking-wider text-slate-500 font-medium">Included</h4>
                 </div>
                 
                 {/* Welcome Pack */}
@@ -365,9 +365,9 @@ const PricingSection = () => {
                       <Check className="h-3 w-3 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Welcome Pack</h4>
+                      <h4 className="font-medium text-sm">PSLE Revision Resources</h4>
                       <span className="text-xs bg-slate-50 text-slate-600 px-2 py-0.5 rounded inline-block mt-1">
-                        PSLE Revision Resources
+                        Welcome Pack
                       </span>
                     </div>
                   </div>
@@ -497,7 +497,7 @@ const PricingSection = () => {
                 
                 {/* In Every Bundle Section */}
                 <div className="mt-4 mb-2">
-                  <h4 className="text-xs uppercase tracking-wider text-slate-500 font-medium">In Every Bundle</h4>
+                  <h4 className="text-xs uppercase tracking-wider text-slate-500 font-medium">Included</h4>
                 </div>
                 
                 {/* Welcome Pack */}
@@ -507,9 +507,9 @@ const PricingSection = () => {
                       <Check className="h-3 w-3 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Welcome Pack</h4>
+                      <h4 className="font-medium text-sm">PSLE Revision Resources</h4>
                       <span className="text-xs bg-slate-50 text-slate-600 px-2 py-0.5 rounded inline-block mt-1">
-                        PSLE Revision Resources
+                        Welcome Pack
                       </span>
                     </div>
                   </div>
