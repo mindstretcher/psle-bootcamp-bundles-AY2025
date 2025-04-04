@@ -33,18 +33,18 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
 }) => {
   const [expanded, setExpanded] = useState(false);
   
-  // Category-based border colors
-  const categoryBorderColor = {
-    'bootcamp': 'border-l-4 border-l-educational-blue',
-    'welcome-pack': 'border-l-4 border-l-teal-500',
-    'timely-support': 'border-l-4 border-l-amber-500'
+  // Category-based styles
+  const categoryTextColor = {
+    'bootcamp': 'text-educational-blue',
+    'welcome-pack': 'text-teal-600',
+    'timely-support': 'text-amber-600'
   };
 
   return (
     <Card 
       className={`border border-slate-100 
                  shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden 
-                 animate-fade-in-up ${categoryBorderColor[category]} 
+                 animate-fade-in-up
                  h-full flex flex-col ${featured ? 'ring-1 ring-educational-blue/10' : ''}`} 
       style={{ animationDelay: `${index * 75}ms` }}
     >
@@ -101,8 +101,8 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
             <ul className="space-y-2">
               {objectives.map((objective, i) => (
                 <li key={i} className="flex items-start">
-                  <span className="inline-block w-2 h-2 rounded-full bg-educational-blue mr-2 mt-2"></span>
-                  <span className="text-slate-700 text-xs">{objective}</span>
+                  <span className="flex-shrink-0 inline-block w-1.5 h-1.5 rounded-full bg-educational-blue/80 mr-2 mt-1.5"></span>
+                  <span className="text-slate-700 text-sm">{objective}</span>
                 </li>
               ))}
             </ul>

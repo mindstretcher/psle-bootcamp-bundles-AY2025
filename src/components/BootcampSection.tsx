@@ -37,12 +37,12 @@ const BootcampSection = () => {
     showLearnMore: true
   }, {
     title: "PSLE Revision Resources",
-    description: "The Welcome Pack contains a comprehensive set of PSLE revision materials, such as carefully curated revision books across all subjects, structured last 4-months study plans & checklists, and a set of PSLE-standard mock exam papers — all developed by our experienced academic team to align with the latest PSLE format and requirements.",
+    description: "The Welcome Pack contains 3 essential components to power your child's PSLE revision:\n\n1️⃣ Revision Books\n2️⃣ Study Planners & Checklists\n3️⃣ PSLE-Standard Mock Papers.\n\nAll materials are developed by our experienced academic team to align with the latest PSLE format and requirements.",
     formats: [],
     objectives: ["Access subject-specific revision books with key concepts, worked examples and practice questions", "Follow our structured 4-month PSLE Study Plan with week-by-week revision guidance", "Track progress with comprehensive PSLE Topic Checklists covering all examinable components", "Practice with PSLE-standard mock papers to build exam confidence and time management skills", "Standard Bundle includes 5 titles, while Booster & Mega Bundles include all 8 titles (with 3 additional English Oral resources)"],
     imageSrc: "/lovable-uploads/psle-resources.png",
     category: 'welcome-pack',
-    showLearnMore: true,
+    showLearnMore: false,
     hideFormats: true
   }, {
     title: "Online Q&A Consultations",

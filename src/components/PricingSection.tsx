@@ -121,7 +121,7 @@ const PricingSection = () => {
             PSLE Bootcamp Bundles Pricing
           </h2>
           <p className="text-slate-600 max-w-3xl mx-auto">
-            Choose your bootcamp bundles and save up to 25%.
+            Save up to 25% with our PSLE Bootcamp Bundles.
           </p>
         </div>
 
