@@ -7,12 +7,12 @@ const ObsessedSection = () => {
     description: "Our bootcamps cover all key PSLE content, skills and techniques you need to master for PSLE success. This includes revising key PSLE concepts, and engaging in rigorous drills and practices which exposes you to commonly-tested PSLE questions."
   }, {
     icon: <BookOpen className="h-6 w-6 text-educational-blue" />,
-    title: "Fully Updated 2025 PSLE Bootcamp Materials",
-    description: "Our 2025 PSLE Bootcamp materials have been completely refreshed with new materials, and also updated to align with 2025 MOE syllabus changes."
+    title: "Latest 2025 PSLE Bootcamp Materials",
+    description: "Our 2025 PSLE Bootcamp materials have been refreshed with new materials, and also updated to align with 2025 MOE syllabus changes."
   }, {
     icon: <Users className="h-6 w-6 text-educational-blue" />,
     title: "Physical & Online Webinar Formats",
-    description: "This year, we’re reintroducing our physical bootcamp format for PSLE Power Up, blending lecture-style teaching with small-group sessions (about 10 students per class) for better interaction and guidance."
+    description: "This year, we’re reintroducing our physical bootcamp format for PSLE Power Up, blending lecture-style teaching with smaller group segments for more interaction, where students can ask questions, participate in discussions and receive support effectively."
   }, {
     icon: <Award className="h-6 w-6 text-educational-blue" />,
     title: "Highly-Experienced PSLE Master Teachers",

@@ -28,9 +28,9 @@ const TeacherSection = () => {
       icon: <BookOpen className="h-6 w-6 text-educational-blue" />
     },
     {
-      name: "Mrs Shum",
+      name: "Mrs Shum Hui",
       subject: "English",
-      description: "With over 30 years of teaching experience, Mrs Shum is a highly respected English Master Teacher. She specialises in helping students master comprehension techniques, writing strategies and oral communication skills, helping thousands achieve remarkable PSLE results.",
+      description: "With over 30 years of teaching experience, Mrs Shum Hui is a highly respected English Master Teacher. She specialises in helping students master comprehension techniques, writing strategies and oral communication skills, helping thousands achieve remarkable PSLE results.",
       image: "/lovable-uploads/15d333d0-ce78-4515-9edd-43d183be0d74.png",
       icon: <MessageSquare className="h-6 w-6 text-educational-blue" />
     },
@@ -58,7 +58,7 @@ const TeacherSection = () => {
     {
       name: "Yu Man",
       subject: "Chinese",
-      description: "As Head of Chinese and a former MOE educator with 14 years of teaching experience, Yu Man has guided countless students to excel in PSLE Chinese. She's known for equipping students with effective techniques for oral, comprehension and composition components.",
+      description: "A former MOE educator with 14 years of teaching experience, Yu Man has guided countless students to excel in PSLE Chinese. She's known for equipping students with effective techniques for oral, comprehension and composition components.",
       image: "/lovable-uploads/ee33bc72-894b-4e2f-b0f1-fc58175edbb1.png",
       icon: <Languages className="h-6 w-6 text-educational-blue" />
     },

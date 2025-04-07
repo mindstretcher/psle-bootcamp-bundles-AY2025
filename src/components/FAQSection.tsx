@@ -102,6 +102,18 @@ const FAQSection = () => {
       )
     },
     {
+      question: "Are there lunch breaks for sessions that span from morning to afternoon?",
+      answer: (
+        <div>
+          <p><strong>Power Up and Last Lap Bootcamp (English, Maths, Science, Chinese Workshops 8:30am - 4:30pm):</strong></p>
+          <p>For Online workshops, there will be a 30-minute lunch break. For Physical workshops, there will be a 45-minute lunch break (bento lunch provided).</p>
+          
+          <p className="mt-2"><strong>English and Chinese Oral Bootcamp (Oral Workshops 9am - 4pm)</strong></p>
+          <p>For both English and Chinese Oral Workshops, there will be a 1-hour lunch break.</p>
+        </div>
+      )
+    },
+    {
       question: "Do I need to complete the PSLE mock papers ahead of time?",
       answer: (
         <div>
