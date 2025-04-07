@@ -10,7 +10,8 @@ const BootcampSection = () => {
     objectives: ["40+ hours of lessons and 300+ pages of refreshed 2025 PSLE Power Up revision materials and practice papers", "Reinforce understanding of PSLE topics and concepts, gain familiarity with trending PSLE questions and common errors, and hone PSLE question analysis and answering techniques", "Receive PSLE mock papers to be completed as pre-work to assess PSLE readiness", "Bonus segments included: Live Q&A walkthroughs, parent briefings and student motivational segment"],
     imageSrc: "/lovable-uploads/power-up-bc.png",
     category: 'bootcamp',
-    showLearnMore: true
+    showLearnMore: true,
+    learnMoreUrl: "https://www.mindstretcher.com/events/psle-power-up-bootcamp"
   }, {
     title: "PSLE English Oral Bootcamp",
     description: "Our PSLE English Oral Bootcamp prepares your child for the crucial 20%-weighted oral exam component. Students will practise potential PSLE oral topics and scenarios, master effective oral techniques using the REAP & PEERS frameworks, experience real exam conditions with physical 1-to-1 mock tests, and receive our newly produced PSLE Oral books, fully aligned with MOE's 2025 English Oral changes.",
@@ -18,7 +19,8 @@ const BootcampSection = () => {
     objectives: ["Practise with our latest PSLE English Oral Bootcamp materials", "Gain exposure to potential PSLE oral topics & stimulus-based conversation scenarios and reinforce effective oral exam techniques and Mind Stretcher's REAP and PEERS frameworks", "Experience exam-simulated practice with 1-to-1 physical mock tests", "Receive our newly-produced PSLE Oral books for comprehensive revision"],
     imageSrc: "/lovable-uploads/english-oral-bc.png",
     category: 'bootcamp',
-    showLearnMore: true
+    showLearnMore: true,
+    learnMoreUrl: "https://www.mindstretcher.com/events/psle-english-oral-bootcamp"
   }, {
     title: "PSLE Chinese Oral Bootcamp",
     description: "Our PSLE Chinese Oral Bootcamp is designed to help students excel in the 25%-weighted Chinese Oral Exam. It prepares them for both the Reading Aloud and Video-Based Conversation (VBC) components. Students will gain exposure to common oral topics, familiarise themselves with structured response formats for typical VBC questions, and practise under exam-simulated conditions through 1-to-1 mock tests.",
@@ -26,7 +28,8 @@ const BootcampSection = () => {
     objectives: ["Practise with our latest PSLE Chinese Oral Bootcamp materials", "Gain familiarity with potential PSLE Chinese Oral topics and scenarios and reinforce effective oral exam techniques and frameworks", "Practice under exam-simulated conditions with physical 1-to-1 mock tests"],
     imageSrc: "/lovable-uploads/chinese-oral-bc.png",
     category: 'bootcamp',
-    showLearnMore: true
+    showLearnMore: true,
+    learnMoreUrl: "https://www.mindstretcher.com/events/psle-chinese-oral-bootcamp"
   }, {
     title: "PSLE Last Lap Bootcamp",
     description: "The PSLE Last Lap Bootcamp is the ultimate final sprint before the exams. It focuses on timely reinforcement of key concepts, targeted practice on commonly challenging components and sharpening of exam techniques so students head into the PSLE confident and well-prepared.",
@@ -34,7 +37,8 @@ const BootcampSection = () => {
     objectives: ["Practise with our refreshed 2025 PSLE Last Lap materials", "Intensive revision on targeted problematic exam components and reinforce understanding and application of exam techniques", "Receive timely teaching support for the final sprint to PSLE"],
     imageSrc: "/lovable-uploads/last-lap-bc.png",
     category: 'bootcamp',
-    showLearnMore: true
+    showLearnMore: true,
+    learnMoreUrl: "https://www.mindstretcher.com/events/psle-the-last-lap-bootcamp"
   }, {
     title: "PSLE Revision Resources",
     description: "The Welcome Pack contains 3 essential components to power your child's PSLE revision:\n\n1️⃣ Revision Books\n2️⃣ Study Planners & Checklists\n3️⃣ PSLE Mock Papers.\n\nAll materials are developed by our experienced academic team to align with the latest PSLE format and requirements.",
@@ -76,6 +80,7 @@ const BootcampSection = () => {
               category={bootcamp.category as 'bootcamp' | 'welcome-pack' | 'timely-support'} 
               showLearnMore={bootcamp.showLearnMore}
               hideFormats={bootcamp.hideFormats}
+              learnMoreUrl={bootcamp.learnMoreUrl}
             />
           ))}
         </div>

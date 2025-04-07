@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Check, BadgePercent } from 'lucide-react';
+import { Check, BadgePercent, ChevronRight } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 
 const PricingSection = () => {
@@ -277,10 +277,6 @@ const PricingSection = () => {
                   ${formatPrice(pricingData[studentType][subjectCount][formats.standard].standard.discounted)}
                 </div>
               </div>
-
-              <Button className="w-full bg-educational-blue hover:bg-educational-blue/90 rounded-md transition-all duration-200 hover:shadow">
-                Register Now
-              </Button>
             </div>
           </div>
 
@@ -406,10 +402,6 @@ const PricingSection = () => {
                   ${formatPrice(pricingData[studentType][subjectCount][formats.booster].booster.discounted)}
                 </div>
               </div>
-
-              <Button className="w-full bg-educational-blue hover:bg-educational-blue/90 rounded-md transition-all duration-200 hover:shadow">
-                Register Now
-              </Button>
             </div>
           </div>
 
@@ -553,12 +545,19 @@ const PricingSection = () => {
                   ${formatPrice(pricingData[studentType][subjectCount][formats.mega].mega.discounted)}
                 </div>
               </div>
-
-              <Button className="w-full bg-educational-blue hover:bg-educational-blue/90 rounded-md transition-all duration-200 hover:shadow">
-                Register Now
-              </Button>
             </div>
           </div>
+        </div>
+        
+        {/* Single Register Now button */}
+        <div className="mt-12 text-center">
+          <Button 
+            size="lg"
+            className="bg-educational-blue hover:bg-educational-blue/90 px-8"
+            onClick={() => window.open('https://www.mindstretcher.com/psle-bootcamp-bundles/checkout', '_blank')}
+          >
+            Register Now <ChevronRight className="ml-1 h-4 w-4" />
+          </Button>
         </div>
       </div>
     </section>

@@ -16,6 +16,7 @@ interface BootcampCardProps {
   category?: 'bootcamp' | 'welcome-pack' | 'timely-support';
   showLearnMore?: boolean;
   hideFormats?: boolean;
+  learnMoreUrl?: string;
 }
 
 const BootcampCard: React.FC<BootcampCardProps> = ({
@@ -29,7 +30,8 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
   featured = false,
   category = 'bootcamp',
   showLearnMore = false,
-  hideFormats = false
+  hideFormats = false,
+  learnMoreUrl = ''
 }) => {
   const [expanded, setExpanded] = useState(false);
   
@@ -126,6 +128,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
       <CardFooter className="pt-4 pb-6 px-6 flex gap-3">
         <Button 
           className="flex-1 bg-educational-blue hover:bg-educational-blue/90"
+          onClick={() => window.open('https://www.mindstretcher.com/psle-bootcamp-bundles/checkout', '_blank')}
         >
           Register Now <ChevronRight className="ml-1 h-4 w-4" />
         </Button>
@@ -134,6 +137,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
           <Button 
             variant="outline"
             className="flex-1 border-educational-blue text-educational-blue hover:bg-blue-50"
+            onClick={() => window.open(learnMoreUrl, '_blank')}
           >
             Learn More <ChevronRight className="ml-1 h-4 w-4" />
           </Button>

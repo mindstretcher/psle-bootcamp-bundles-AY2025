@@ -110,7 +110,10 @@ const Index = () => {
 
           {/* Register Button */}
           <div className="flex items-center">
-            <Button className="bg-educational-blue hover:bg-blue-700">
+            <Button 
+              className="bg-educational-blue hover:bg-blue-700"
+              onClick={() => window.open('https://www.mindstretcher.com/psle-bootcamp-bundles/checkout', '_blank')}
+            >
               Register Now <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           </div>
@@ -157,7 +160,11 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Ready to start your PSLE journey?</h2>
             <p className="text-lg mb-8 text-blue-100">Secure your child's spot in our PSLE Bootcamp Bundles and set them up for PSLE success.</p>
-            <Button size="lg" className="bg-white text-educational-blue hover:bg-blue-50 transition-colors duration-300">
+            <Button 
+              size="lg" 
+              className="bg-white text-educational-blue hover:bg-blue-50 transition-colors duration-300"
+              onClick={() => window.open('https://www.mindstretcher.com/psle-bootcamp-bundles/checkout', '_blank')}
+            >
               Register Now <ChevronRight className="ml-1 h-5 w-5" />
             </Button>
           </div>
@@ -165,7 +172,7 @@ const Index = () => {
       </main>
       
       {/* Simplified Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-8 px-4">
+      <footer className="bg-white text-slate-600 py-8 px-4 border-t border-slate-200">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center mb-4 md:mb-0">
@@ -178,37 +185,37 @@ const Index = () => {
             <nav className="flex flex-wrap justify-center gap-6 mb-4 md:mb-0">
               <button 
                 onClick={() => scrollToSection('obsessed-section')} 
-                className="text-slate-400 hover:text-white transition-colors text-sm"
+                className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Why It Works
               </button>
               <button 
                 onClick={() => scrollToSection('bootcamp-section')} 
-                className="text-slate-400 hover:text-white transition-colors text-sm"
+                className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Bootcamps
               </button>
               <button 
                 onClick={() => scrollToSection('bootcamp-timings')} 
-                className="text-slate-400 hover:text-white transition-colors text-sm"
+                className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Schedules
               </button>
               <button 
                 onClick={() => scrollToSection('pricing-section')} 
-                className="text-slate-400 hover:text-white transition-colors text-sm"
+                className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Pricing
               </button>
               <button 
                 onClick={() => scrollToSection('teacher-section')} 
-                className="text-slate-400 hover:text-white transition-colors text-sm"
+                className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Teachers
               </button>
             </nav>
           </div>
-          <div className="text-center mt-6 pt-6 border-t border-slate-800 text-sm">
+          <div className="text-center mt-6 pt-6 border-t border-slate-200 text-sm">
             <p>&copy; {new Date().getFullYear()} Mind Stretcher Education Group. All rights reserved.</p>
           </div>
         </div>

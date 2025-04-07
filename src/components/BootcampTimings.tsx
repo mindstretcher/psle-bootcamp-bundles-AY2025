@@ -532,7 +532,7 @@ const BootcampTimings: React.FC = () => {
               <h2 className="text-xl font-semibold mb-6">Q&A Consultations <FormatBadge format="Online Webinar" /></h2>
               <div className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
                 <p>
-                  <span className="font-medium">Note:</span> Q&A Consultations are only available as part of any Bootcamp Bundles.
+                  <span className="font-medium">Note:</span> Q&A Consultations are complimentary as part of any Bootcamp Bundles.
                 </p>
               </div>
               <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
