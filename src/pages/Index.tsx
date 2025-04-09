@@ -17,6 +17,7 @@ const Index = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to handle both local scrolling and URL hash updating
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -34,6 +35,9 @@ const Index = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
+      
+      // Update URL hash without triggering a page reload
+      window.history.pushState(null, '', `#${id}`);
     }
     setIsMenuOpen(false);
   };
@@ -54,8 +58,33 @@ const Index = () => {
     updateSectionPadding();
     window.addEventListener('resize', updateSectionPadding);
     
+    // Check for hash in URL on initial load and scroll to that section
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1); // Remove the # character
+      if (hash) {
+        const element = document.getElementById(hash);
+        if (element) {
+          setTimeout(() => {
+            const headerHeight = document.querySelector('header')?.offsetHeight || 64;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }, 100); // Small delay to ensure DOM is fully loaded
+        }
+      }
+    };
+    
+    // Handle initial hash and hash changes
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    
     return () => {
       window.removeEventListener('resize', updateSectionPadding);
+      window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
 
@@ -65,45 +94,53 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/c9bd57da-c8ee-4e55-981a-c3def0189823.png" 
-              alt="Mind Stretcher Logo" 
-              className="h-10" 
-            />
+            <a href="https://www.mindstretcher.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="/lovable-uploads/c9bd57da-c8ee-4e55-981a-c3def0189823.png" 
+                alt="Mind Stretcher Logo" 
+                className="h-10" 
+              />
+            </a>
           </div>
           
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center justify-center flex-1 mx-4">
             <div className="flex items-center space-x-8">
               <button 
-                onClick={() => scrollToSection('obsessed-section')} 
+                onClick={() => scrollToSection('why-it-works')} 
                 className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
               >
                 Why It Works
               </button>
               <button 
-                onClick={() => scrollToSection('bootcamp-section')} 
+                onClick={() => scrollToSection('bootcamp-bundles')} 
                 className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
               >
                 Bootcamps
               </button>
               <button 
-                onClick={() => scrollToSection('bootcamp-timings')} 
+                onClick={() => scrollToSection('schedules')} 
                 className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
               >
                 Schedules
               </button>
               <button 
-                onClick={() => scrollToSection('pricing-section')} 
+                onClick={() => scrollToSection('pricing')} 
                 className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
               >
                 Pricing
               </button>
               <button 
-                onClick={() => scrollToSection('teacher-section')} 
+                onClick={() => scrollToSection('teachers')} 
                 className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
               >
                 Teachers
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')} 
+                className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
+              >
+                FAQ
               </button>
             </div>
           </nav>
@@ -128,32 +165,34 @@ const Index = () => {
         <VideoSection />
         
         {/* "We're Obsessed" Section */}
-        <section id="obsessed-section" className="pt-8">
+        <section id="why-it-works" className="pt-8">
           <ObsessedSection />
         </section>
         
         {/* Bootcamp Details Section */}
-        <section id="bootcamp-section" className="pt-8">
+        <section id="bootcamp-bundles" className="pt-8">
           <BootcampSection />
         </section>
         
         {/* Bootcamp Dates & Timings Section */}
-        <section id="bootcamp-timings" className="pt-8">
+        <section id="schedules" className="pt-8">
           <BootcampTimings />
         </section>
         
         {/* Pricing Section */}
-        <section id="pricing-section" className="pt-8">
+        <section id="pricing" className="pt-8">
           <PricingSection />
         </section>
         
         {/* Teachers Section */}
-        <section id="teacher-section" className="pt-8">
+        <section id="teachers" className="pt-8">
           <TeacherSection />
         </section>
         
         {/* FAQ Section */}
-        <FAQSection />
+        <section id="faq" className="pt-8">
+          <FAQSection />
+        </section>
         
         {/* Call to Action Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-educational-blue to-blue-600 text-white">
@@ -176,42 +215,50 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center mb-4 md:mb-0">
-              <img 
-                src="/lovable-uploads/c9bd57da-c8ee-4e55-981a-c3def0189823.png" 
-                alt="Mind Stretcher Logo" 
-                className="h-10" 
-              />
+              <a href="https://www.mindstretcher.com" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="/lovable-uploads/c9bd57da-c8ee-4e55-981a-c3def0189823.png" 
+                  alt="Mind Stretcher Logo" 
+                  className="h-10" 
+                />
+              </a>
             </div>
             <nav className="flex flex-wrap justify-center gap-6 mb-4 md:mb-0">
               <button 
-                onClick={() => scrollToSection('obsessed-section')} 
+                onClick={() => scrollToSection('why-it-works')} 
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Why It Works
               </button>
               <button 
-                onClick={() => scrollToSection('bootcamp-section')} 
+                onClick={() => scrollToSection('bootcamp-bundles')} 
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Bootcamps
               </button>
               <button 
-                onClick={() => scrollToSection('bootcamp-timings')} 
+                onClick={() => scrollToSection('schedules')} 
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Schedules
               </button>
               <button 
-                onClick={() => scrollToSection('pricing-section')} 
+                onClick={() => scrollToSection('pricing')} 
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Pricing
               </button>
               <button 
-                onClick={() => scrollToSection('teacher-section')} 
+                onClick={() => scrollToSection('teachers')} 
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Teachers
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')} 
+                className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
+              >
+                FAQ
               </button>
             </nav>
           </div>
