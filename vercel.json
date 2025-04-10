@@ -1,5 +1,8 @@
 {
     "rewrites": [
-        { "source": "/psle-bootcamp-bundles/:path*", "destination": "/" }
+        {
+            "source": "/psle-bootcamp-bundles/:path*",
+            "destination": "/:path*"
+        }
     ]
   }
