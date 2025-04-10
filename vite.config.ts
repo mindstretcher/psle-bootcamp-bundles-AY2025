@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: 'https://psle-bootcamp-bundles-ay2025.vercel.app/psle-bootcamp-bundles/',
   server: {
     host: "::",
     port: 8080,
