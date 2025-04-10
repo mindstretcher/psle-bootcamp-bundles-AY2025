@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/psle-bootcamp-bundles/(.*)",
+        "destination": "/psle-bootcamp-bundles/index.html"
+      }
+    ]
+  }
