@@ -10,63 +10,63 @@ const TeacherSection = () => {
       name: "Moses Soh",
       subject: "Deputy CEO",
       description: "Moses is the Deputy CEO of Mind Stretcher and a President’s Scholar with degrees from Wharton, Princeton and Stanford. A former Rafflesian and four-time RI All-Round Excellence Award winner, he is passionate about leveraging innovation to help students grow and thrive through education.",
-      image: "/lovable-uploads/moses-soh-square.jpg",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/moses-soh-square.jpg",
       icon: <BookOpen className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "Lim Weilun",
       subject: "Head of Academics",
       description: "Weilun is the Head of Academics at Mind Stretcher and a highly sought-after Master Teacher for Mathematics. A top student from Raffles Institution and winner of the Prime Minister’s Book Prize, he holds double degrees from Columbia and a Master’s from Cambridge. He has helped countless students secure placements in top secondary schools.",
-      image: "/lovable-uploads/e298ba1a-dd88-458b-a6fd-063c354492fb.png",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/e298ba1a-dd88-458b-a6fd-063c354492fb.png",
       icon: <Book className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "Mavis Tan",
       subject: "Head of Primary English",
       description: "As the Head of English and a former MOE educator, Mavis brings over 14 years of experience preparing students for PSLE. Known for her engaging, dramatic delivery and effervescent style, she's guided numerous cohorts to excel in PSLE English over the past 7 years at our bootcamps.",
-      image: "/lovable-uploads/56654422-f1a2-4876-ad3a-d970a8150416.png",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/56654422-f1a2-4876-ad3a-d970a8150416.png",
       icon: <BookOpen className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "Mrs Shum Hui",
       subject: "English",
       description: "With over 30 years of teaching experience, Mrs Shum Hui is a highly respected English Master Teacher. She specialises in helping students master comprehension techniques, writing strategies and oral communication skills, helping thousands achieve remarkable PSLE results.",
-      image: "/lovable-uploads/15d333d0-ce78-4515-9edd-43d183be0d74.png",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/15d333d0-ce78-4515-9edd-43d183be0d74.png",
       icon: <MessageSquare className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "James Wong",
       subject: "Maths",
       description: "James has over 18 years of teaching experience in Mathematics and is a former university lecturer. A recipient of the prestigious PSC and Chevening Scholarships, he is known for his clear teaching style. James makes complex word problems easy to understand - helping P6 students gain confidence and excel in the PSLE.",
-      image: "/lovable-uploads/james-wong-circle.png",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/james-wong-circle.png",
       icon: <Book className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "Chew Meng Yee",
       subject: "Head of Primary Science",
       description: "As Head of Science, Meng Yee has a sharp understanding of PSLE exam patterns, guiding students through misconceptions and tricky open-ended questions. He breaks down complex principles with a structured approach that helps students achieve outstanding results.",
-      image: "/lovable-uploads/d8067628-8fcf-4536-ad02-822a133acee2.png",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/d8067628-8fcf-4536-ad02-822a133acee2.png",
       icon: <GraduationCap className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "Albert Kang",
       subject: "Science",
       description: "Albert is a former MOE educator with over 10 years of teaching experience. Known for his engaging and inquiry-driven lessons, Albert helps students connect Science concepts to the real world, igniting a deeper understanding and love for learning as they prepare for the PSLE.",
-      image: "/lovable-uploads/albert-kang-circle.png",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/albert-kang-circle.png",
       icon: <GraduationCap className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "Yu Man",
       subject: "Chinese",
       description: "A former MOE educator with 14 years of teaching experience, Yu Man has guided countless students to excel in PSLE Chinese. She's known for equipping students with effective techniques for oral, comprehension and composition components.",
-      image: "/lovable-uploads/ee33bc72-894b-4e2f-b0f1-fc58175edbb1.png",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/ee33bc72-894b-4e2f-b0f1-fc58175edbb1.png",
       icon: <Languages className="h-6 w-6 text-educational-blue" />
     },
     {
       name: "Tang Jianling",
       subject: "Chinese",
       description: "Jianling is a highly respected Master Teacher with over 10 years of teaching experience. Known for her lively and humorous style, she makes learning Chinese enjoyable and has helped many students achieve outstanding results in the PSLE Chinese examination through her engaging teaching methods.",
-      image: "/lovable-uploads/jianling-tang-circle.png",
+      image: "https://psle-bootcamp-bundles-ay2025.vercel.app/lovable-uploads/jianling-tang-circle.png",
       icon: <Languages className="h-6 w-6 text-educational-blue" />
     }
   ];
