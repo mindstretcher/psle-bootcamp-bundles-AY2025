@@ -93,6 +93,15 @@ const FAQSection = () => {
       )
     },
     {
+      question: "Can I mix online and physical formats for the PSLE Power Up Bootcamp?",
+      answer: (
+        <div>
+          <p>Our Bootcamp Bundle pricing applies only if all selected subjects for the Power Up Bootcamp are in the same format — either fully online or fully physical.</p>
+          <p className="mt-2">If you choose to mix formats (e.g. Science and Math physical, English and Chinese online), the fees will be calculated separately based on the respective 2-subject rates. You’ll also need to register for each format separately.</p>
+        </div>
+      )
+    },
+    {
       question: "Is transport and lunch provided for students attending the PSLE Power Up Physical Bootcamp?",
       answer: (
         <div>

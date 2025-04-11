@@ -43,7 +43,7 @@ const BootcampSection = () => {
     title: "PSLE Revision Resources",
     description: "The Welcome Pack contains 3 essential components to power your child's PSLE revision:\n\n1️⃣ Revision Books\n2️⃣ Study Planners & Checklists\n3️⃣ PSLE Mock Papers.\n\nAll materials are developed by our experienced academic team to align with the latest PSLE format and requirements.",
     formats: [],
-    objectives: ["PSLE revision books with comprehensive coverage of commonly-tested PSLE questions", "Standard Bundle includes 5 titles, while Booster & Mega Bundles include all 8 titles (with 3 additional English Oral resources)","Structured 4-month PSLE Study Plan and Topic Checklists", "PSLE mock papers to build exam confidence and time management skills"],
+    objectives: ["PSLE revision books with comprehensive coverage of commonly-tested PSLE questions", "Standard Bundle includes 5 titles, while Booster & Mega Bundles include all 8 titles (with 3 English Oral 2025 format books)","Structured 4-month PSLE Study Plan and Topic Checklists", "PSLE mock papers to build exam confidence and time management skills"],
     imageSrc: "https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/psle-resources.png",
     category: 'welcome-pack',
     showLearnMore: false,
@@ -61,7 +61,7 @@ const BootcampSection = () => {
   
   return <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-white to-blue-50/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-educational-dark font-display">What's in the PSLE Bootcamp Bundles</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-educational-dark font-display">What's in our PSLE Bootcamp Bundles</h2>
         <p className="text-slate-600 text-center mb-16 max-w-3xl mx-auto">
           Everything you need for effective PSLE Preparation.
         </p>

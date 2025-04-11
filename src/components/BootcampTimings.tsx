@@ -183,9 +183,9 @@ const BootcampTimings: React.FC = () => {
               </div>
             </div>
 
-            {/* Parent Debriefing Section */}
+            {/* Parent Briefing Section */}
             <div className="mb-12">
-              <h2 className="text-xl font-semibold mb-6">Parent Debriefing <FormatBadge format="Online Webinar" /></h2>
+              <h2 className="text-xl font-semibold mb-6">Parent Briefing <FormatBadge format="Online Webinar" /></h2>
               <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
                 <div className="table-container overflow-x-auto">
                   <table className="w-full min-w-[400px]">
@@ -410,7 +410,7 @@ const BootcampTimings: React.FC = () => {
 
             {/* PSLE English Oral SBC Workshops Section */}
             <div className="mb-12">
-              <h2 className="text-xl font-semibold mb-6">PSLE SBC Workshops <FormatBadge format="Online Webinar" /></h2>
+              <h2 className="text-xl font-semibold mb-6">PSLE English Oral SBC Workshops <FormatBadge format="Online Webinar" /></h2>
               <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
                 <div className="table-container overflow-x-auto">
                   <table className="w-full min-w-[400px]">
@@ -423,7 +423,7 @@ const BootcampTimings: React.FC = () => {
                     </thead>
                     <tbody>
                       <tr className="hover:bg-gray-50 transition">
-                        <td className="px-6 py-4">PSLE SBC Workshops</td>
+                        <td className="px-6 py-4">PSLE English Oral SBC Workshops</td>
                         <td className="px-6 py-4 text-sm text-gray-600">7:30pm - 9:30pm</td>
                         <td className="px-6 py-4 text-sm text-blue-600 font-medium">18, 25-Jul, 1-Aug (Fri)</td>
                       </tr>
@@ -500,7 +500,7 @@ const BootcampTimings: React.FC = () => {
 
             {/* PSLE Chinese Oral Final Sprint Section */}
             <div className="mb-12">
-              <h2 className="text-xl font-semibold mb-6">PSLE Final Sprint Workshop <FormatBadge format="Online Webinar" /></h2>
+              <h2 className="text-xl font-semibold mb-6">PSLE Chinese Oral Final Sprint Workshop <FormatBadge format="Online Webinar" /></h2>
               <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
                 <div className="table-container overflow-x-auto">
                   <table className="w-full min-w-[400px]">
@@ -513,7 +513,7 @@ const BootcampTimings: React.FC = () => {
                     </thead>
                     <tbody>
                       <tr className="hover:bg-gray-50 transition">
-                        <td className="px-6 py-4">PSLE Final Sprint Workshop</td>
+                        <td className="px-6 py-4">PSLE Chinese Oral Final Sprint Workshop</td>
                         <td className="px-6 py-4 text-sm text-gray-600">7pm - 10pm</td>
                         <td className="px-6 py-4 text-sm text-blue-600 font-medium">2-Aug (Sat)</td>
                       </tr>

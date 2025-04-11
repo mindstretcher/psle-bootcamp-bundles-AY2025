@@ -9,7 +9,7 @@ const TeacherSection = () => {
     {
       name: "Moses Soh",
       subject: "Deputy CEO",
-      description: "Moses is the Deputy CEO of Mind Stretcher and a President’s Scholar with degrees from Wharton, Princeton and Stanford. A former Rafflesian and four-time RI All-Round Excellence Award winner, he is passionate about leveraging innovation to help students grow and thrive through education.",
+      description: "Moses is the Deputy CEO of Mind Stretcher and a President’s Scholar with degrees from Wharton, Princeton and Stanford. A former Rafflesian and four-time RI All-Round Excellence Award winner, he is passionate about leveraging technology to help students grow and thrive through education.",
       image: "https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/moses-soh-square.jpg",
       icon: <BookOpen className="h-6 w-6 text-educational-blue" />
     },

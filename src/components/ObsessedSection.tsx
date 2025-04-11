@@ -8,7 +8,7 @@ const ObsessedSection = () => {
   }, {
     icon: <BookOpen className="h-6 w-6 text-educational-blue" />,
     title: "Latest 2025 PSLE Bootcamp Materials",
-    description: "Our 2025 PSLE Bootcamp materials have been refreshed with new materials, and also updated to align with 2025 MOE syllabus changes."
+    description: "Our 2025 PSLE Bootcamp materials have been refreshed with new materials, and also updated to align with 2025 MOE syllabus changes. These materials are designed to help conquer weaknesses and prepare students well for the PSLE."
   }, {
     icon: <Users className="h-6 w-6 text-educational-blue" />,
     title: "Physical & Online Webinar Formats",

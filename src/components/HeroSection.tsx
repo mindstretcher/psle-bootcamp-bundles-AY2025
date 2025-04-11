@@ -12,7 +12,7 @@ const HeroSection = () => {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-educational-dark animate-fade-in-up font-display">
           <span className="block text-5xl sm:text-6xl md:text-7xl text-educational-blue mb-3">Journey to PSLE</span>
-          <span className="block text-educational-dark">with our Bootcamp Bundles</span>
+          <span className="block text-educational-dark">with our Flagship Bootcamps</span>
         </h1>
         
         {/* Savings callout - improved mobile layout */}
