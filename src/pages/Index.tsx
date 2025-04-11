@@ -96,7 +96,7 @@ const Index = () => {
           <div className="flex items-center">
             <a href="https://www.mindstretcher.com" target="_blank" rel="noopener noreferrer">
               <img 
-                src="https://main-website.sgp1.cdn.digitaloceanspaces.com/psle-bootcamp-bundles/c9bd57da-c8ee-4e55-981a-c3def0189823.png" 
+                src="https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/c9bd57da-c8ee-4e55-981a-c3def0189823.png" 
                 alt="Mind Stretcher Logo" 
                 className="h-10" 
               />
@@ -202,7 +202,7 @@ const Index = () => {
             <Button 
               size="lg" 
               className="bg-white text-educational-blue hover:bg-blue-50 transition-colors duration-300"
-              onClick={() => window.open('https://www.mindstretcher.com/psle-bootcamp-bundles/checkout', '_blank')}
+              onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
             >
               Register Now <ChevronRight className="ml-1 h-5 w-5" />
             </Button>
@@ -217,7 +217,7 @@ const Index = () => {
             <div className="flex items-center mb-4 md:mb-0">
               <a href="https://www.mindstretcher.com" target="_blank" rel="noopener noreferrer">
                 <img 
-                  src="https://main-website.sgp1.cdn.digitaloceanspaces.com/psle-bootcamp-bundles/c9bd57da-c8ee-4e55-981a-c3def0189823.png" 
+                  src="https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/c9bd57da-c8ee-4e55-981a-c3def0189823.png" 
                   alt="Mind Stretcher Logo" 
                   className="h-10" 
                 />

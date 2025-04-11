@@ -67,7 +67,7 @@ const VideoSection = () => {
               playsInline
               muted
               loop
-              poster="https://main-website.sgp1.cdn.digitaloceanspaces.com/psle-bootcamp-bundles/c9bd57da-c8ee-4e55-981a-c3def0189823.png"
+              poster="https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/c9bd57da-c8ee-4e55-981a-c3def0189823.png"
             >
               <source 
                 src="https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/videos/2025%20PSLE%20Bootcamp%20Highlight+Testimonial_v3.mp4" 

@@ -34,7 +34,7 @@ const HeroSection = () => {
           size="lg" 
           className="text-lg px-8 py-6 font-medium rounded-full bg-educational-blue hover:bg-blue-700 transition-all duration-300 animate-fade-in-up"
           style={{ animationDelay: '400ms' }}
-          onClick={() => window.open('https://www.mindstretcher.com/psle-bootcamp-bundles/checkout', '_blank')}
+          onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
         >
           Register Now <ChevronRight className="ml-2 h-5 w-5" />
         </Button>

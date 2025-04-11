@@ -128,7 +128,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
       <CardFooter className="pt-4 pb-6 px-6 flex gap-3">
         <Button 
           className="flex-1 bg-educational-blue hover:bg-educational-blue/90"
-          onClick={() => window.open('https://www.mindstretcher.com/psle-bootcamp-bundles/checkout', '_blank')}
+          onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
         >
           Register Now <ChevronRight className="ml-1 h-4 w-4" />
         </Button>
