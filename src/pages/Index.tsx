@@ -149,7 +149,7 @@ const Index = () => {
           <div className="flex items-center">
             <Button 
               className="bg-educational-blue hover:bg-blue-700"
-              onClick={() => window.open('https://www.mindstretcher.com/psle-bootcamp-bundles/checkout', '_blank')}
+              onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
             >
               Register Now <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
