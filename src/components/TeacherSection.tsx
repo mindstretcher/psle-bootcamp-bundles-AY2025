@@ -49,13 +49,6 @@ const TeacherSection = () => {
       icon: <GraduationCap className="h-6 w-6 text-educational-blue" />
     },
     {
-      name: "Albert Kang",
-      subject: "Science",
-      description: "Albert is a former MOE educator with over 10 years of teaching experience. Known for his engaging and inquiry-driven lessons, Albert helps students connect Science concepts to the real world, igniting a deeper understanding and love for learning as they prepare for the PSLE.",
-      image: "https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/albert-kang-circle.png",
-      icon: <GraduationCap className="h-6 w-6 text-educational-blue" />
-    },
-    {
       name: "Yu Man",
       subject: "Chinese",
       description: "A former MOE educator with 14 years of teaching experience, Yu Man has guided countless students to excel in PSLE Chinese. She's known for equipping students with effective techniques for oral, comprehension and composition components.",

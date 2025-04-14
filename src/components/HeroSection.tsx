@@ -28,7 +28,7 @@ const HeroSection = () => {
         </div>
         
         <p className="text-base md:text-lg lg:text-xl text-slate-600 mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-          Our four flagship PSLE Revision Bootcamps run from May to September to help students prepare for PSLE 2025. Over the years, thousands of P6 students have benefited from our focused revision and proven exam strategies and achieved outstanding PSLE results.
+          Our four flagship PSLE Revision Bootcamps run from May to September to help students prepare for PSLE 2025. Over the years, thousands of P6 students have benefited from our focused revision and proven exam strategies and achieved outstanding PSLE results. Bundles are available till end June.
         </p>
         <Button 
           size="lg" 
