@@ -64,8 +64,8 @@ const FAQSection = () => {
         <div>
           <p>As bootcamps are held from May to September, materials will be released in phases:</p>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li><strong>Mid-May:</strong> PSLE Power Up materials, English & Chinese Oral Pack materials, revision books, mock papers and study plans & checklists</li>
-            <li><strong>Mid-July:</strong> PSLE Chinese Oral Final Sprint materials</li>
+            <li><strong>Mid-May:</strong> PSLE Power Up Materials, 5 revision books, mock papers and study plans & checklists</li>
+            <li><strong>End-May:</strong> PSLE English & Chinese Oral Pack, PSLE Chinese Oral final sprint materials, 3 revision books for English Oral</li>
             <li><strong>End-August:</strong> PSLE Last Lap Bootcamp materials</li>
           </ul>
           
