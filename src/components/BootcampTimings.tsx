@@ -551,7 +551,7 @@ const BootcampTimings: React.FC = () => {
                           <SubjectIcon initial="E" color="#3b82f6" name="English" />
                         </td>
                         <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">20 Sep (Fri)</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">19 Sep (Fri)</td>
                       </tr>
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                         <td className="px-6 py-4">
