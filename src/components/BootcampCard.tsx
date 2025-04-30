@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp, ChevronRight } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { redirectToCheckout } from '@/lib/helper';
 
 interface BootcampCardProps {
   title: string;
@@ -128,7 +129,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
       <CardFooter className="pt-4 pb-6 px-6 flex gap-3">
         <Button 
           className="flex-1 bg-educational-blue hover:bg-educational-blue/90"
-          onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
+          onClick={() => redirectToCheckout()}
         >
           Register Now <ChevronRight className="ml-1 h-4 w-4" />
         </Button>
