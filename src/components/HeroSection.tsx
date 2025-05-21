@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUp, BarChart, Award, Percent } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from '@/hooks/use-mobile';
+import { redirectToCheckout } from '@/lib/helper';
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
@@ -34,7 +35,7 @@ const HeroSection = () => {
           size="lg" 
           className="text-lg px-8 py-6 font-medium rounded-full bg-educational-blue hover:bg-blue-700 transition-all duration-300 animate-fade-in-up"
           style={{ animationDelay: '400ms' }}
-          onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
+          onClick={() => redirectToCheckout()}
         >
           Register Now <ChevronRight className="ml-2 h-5 w-5" />
         </Button>

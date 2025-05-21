@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, BadgePercent, ChevronRight } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
+import { redirectToCheckout } from '@/lib/helper';
 
 const PricingSection = () => {
   // State management
@@ -554,7 +555,7 @@ const PricingSection = () => {
           <Button 
             size="lg"
             className="bg-educational-blue hover:bg-educational-blue/90 px-8"
-            onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
+            onClick={() => redirectToCheckout()}
           >
             Register Now <ChevronRight className="ml-1 h-4 w-4" />
           </Button>

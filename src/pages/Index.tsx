@@ -10,6 +10,7 @@ import PricingSection from '@/components/PricingSection';
 import BootcampTimings from '@/components/BootcampTimings';
 import CountdownTimer from '@/components/CountdownTimer';
 import { ChevronRight } from 'lucide-react';
+import { redirectToCheckout } from '@/lib/helper';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -156,7 +157,7 @@ const Index = () => {
           <div className="flex items-center">
             <Button 
               className="bg-educational-blue hover:bg-blue-700"
-              onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
+              onClick={() => redirectToCheckout()}
             >
               Register Now <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
@@ -210,7 +211,7 @@ const Index = () => {
             <Button 
               size="lg" 
               className="bg-white text-educational-blue hover:bg-blue-50 transition-colors duration-300"
-              onClick={() => window.open('https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/checkout', '_blank')}
+              onClick={() => redirectToCheckout()}
             >
               Register Now <ChevronRight className="ml-1 h-5 w-5" />
             </Button>
