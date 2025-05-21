@@ -8,6 +8,7 @@ import FAQSection from '@/components/FAQSection';
 import ObsessedSection from '@/components/ObsessedSection';
 import PricingSection from '@/components/PricingSection';
 import BootcampTimings from '@/components/BootcampTimings';
+import CountdownTimer from '@/components/CountdownTimer';
 import { ChevronRight } from 'lucide-react';
 
 const Index = () => {
@@ -90,8 +91,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+      <div className="sticky top-0 z-50 flex flex-col w-full">
+        {/* Countdown Timer */}
+        <div className="w-full">
+          <CountdownTimer />
+        </div>
+        
+        {/* Navigation */}
+        <header className="w-full bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <div className="flex items-center">
             <a href="https://www.mindstretcher.com" target="_blank" rel="noopener noreferrer">
@@ -156,6 +163,7 @@ const Index = () => {
           </div>
         </div>
       </header>
+      </div>
 
       <main>
         {/* Hero Section */}
