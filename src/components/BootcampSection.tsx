@@ -6,7 +6,7 @@ const BootcampSection = () => {
   const bootcamps = [{
     title: "PSLE Power Up Bootcamp",
     description: "Our highly-popular PSLE Power Up Bootcamp is designed to provide structured revision and intensive practice for PSLE success. With 40+ hours of lessons, 300+ pages of latest 2025 revision materials, and live Q&A walkthroughs, students gain a comprehensive understanding of PSLE topics, question trends and exam strategies. A motivational segment and parent briefings ensure both students and parents are well-prepared.",
-    formats: ["Online Webinar", "Physical (Limited Slots)"],
+    formats: ["Online Webinar", "Physical Classes"],
     objectives: ["40+ hours of lessons and 300+ pages of refreshed 2025 PSLE Power Up revision materials and practice papers", "Reinforce understanding of PSLE topics and concepts, gain familiarity with trending PSLE questions and common errors, and hone PSLE question analysis and answering techniques", "Receive PSLE mock papers to be completed as pre-work to assess PSLE readiness", "Bonus segments included: Live Q&A walkthroughs, parent briefings and student motivational segment"],
     imageSrc: "https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/power-up-bc.png",
     category: 'bootcamp',
@@ -39,29 +39,11 @@ const BootcampSection = () => {
     category: 'bootcamp',
     showLearnMore: true,
     learnMoreUrl: "https://www.mindstretcher.com/events/psle-the-last-lap-bootcamp"
-  }, {
-    title: "PSLE Revision Resources",
-    description: "The Welcome Pack contains 3 essential components to power your child's PSLE revision:\n\n1️⃣ Revision Books\n2️⃣ Study Planners & Checklists\n3️⃣ PSLE Mock Papers.\n\nAll materials are developed by our experienced academic team to align with the latest PSLE format and requirements.",
-    formats: [],
-    objectives: ["PSLE revision books with comprehensive coverage of commonly-tested PSLE questions", "Standard Bundle includes 5 titles, while Booster & Mega Bundles include all 8 titles (with 3 English Oral 2025 format books)","Structured 6-month PSLE Study Plan and Topic Checklists", "PSLE mock papers to build exam confidence and time management skills"],
-    imageSrc: "https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/psle-resources.png",
-    category: 'welcome-pack',
-    showLearnMore: false,
-    hideFormats: true
-  }, {
-    title: "Online Q&A Consultations",
-    description: "The PSLE Online Q&A Consultations are live, subject-specific sessions (2.5 hours each) held one week before the PSLE. Students can submit questions in advance and vote on topics for our academic team to address. Available only as part of any Bootcamp Bundle.",
-    formats: [],
-    objectives: ["10 hours of targeted consultation (2.5 hours per subject)", "Submit your most pressing questions for our academic team to address right before PSLE", "Gain clarity on challenging concepts and learn from questions submitted by peers", "Receive last-minute tips and strategies from our experienced academic specialists"],
-    imageSrc: "https://main-website.sgp1.cdn.digitaloceanspaces.com/journey-to-psle-bootcamp-bundles/online-qa-consultation.png",
-    category: 'timely-support',
-    showLearnMore: false,
-    hideFormats: true
   }];
   
-  return <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-white to-blue-50/30">
+  return <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-pastel-blue/30 to-blue-50/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-educational-dark font-display">What's in our PSLE Bootcamp Bundles</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-educational-dark font-display">Our Flagship PSLE Bootcamps</h2>
         <p className="text-slate-600 text-center mb-16 max-w-3xl mx-auto">
           Everything you need for effective PSLE Preparation.
         </p>
@@ -79,7 +61,6 @@ const BootcampSection = () => {
               imageSrc={bootcamp.imageSrc}
               category={bootcamp.category as 'bootcamp' | 'welcome-pack' | 'timely-support'} 
               showLearnMore={bootcamp.showLearnMore}
-              hideFormats={bootcamp.hideFormats}
               learnMoreUrl={bootcamp.learnMoreUrl}
             />
           ))}
