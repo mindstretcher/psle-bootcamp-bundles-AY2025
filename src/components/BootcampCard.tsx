@@ -229,7 +229,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
                     <div className="flex flex-col gap-1">
                       <div className="flex items-center gap-2">
                         <div className="text-xs font-medium text-slate-600">MS:</div>
-                        <span className="line-through text-slate-500 text-sm">$1240</span>
+                        <span className="line-through text-slate-500 text-sm">$1520</span>
                         <span className="bg-educational-blue text-white font-bold px-2 py-0.5 rounded text-sm">$790</span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -365,7 +365,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
                     <div className="flex flex-col gap-1">
                       <div className="flex items-center gap-2">
                         <div className="text-xs font-medium text-slate-600">MS:</div>
-                        <span className="line-through text-slate-500 text-sm">$1660</span>
+                        <span className="line-through text-slate-500 text-sm">$1960</span>
                         <span className="bg-educational-blue text-white font-bold px-2 py-0.5 rounded text-sm">$1090</span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -515,13 +515,13 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
                     <div className="text-xs font-medium text-slate-600">MS:</div>
                     {title === "PSLE English Oral Bootcamp" && (
                       <>
-                        <span className="line-through text-slate-500 text-sm">$660</span>
+                        <span className="line-through text-slate-500 text-sm">$810</span>
                         <span className="bg-educational-blue text-white font-bold px-2 py-0.5 rounded text-sm">$480</span>
                       </>
                     )}
                     {title === "PSLE Chinese Oral Bootcamp" && (
                       <>
-                        <span className="line-through text-slate-500 text-sm">$510</span>
+                        <span className="line-through text-slate-500 text-sm">$630</span>
                         <span className="bg-educational-blue text-white font-bold px-2 py-0.5 rounded text-sm">$420</span>
                       </>
                     )}
@@ -628,7 +628,7 @@ const BootcampCard: React.FC<BootcampCardProps> = ({
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2">
                     <div className="text-xs font-medium text-slate-600">MS:</div>
-                    <span className="line-through text-slate-500 text-sm">$980</span>
+                    <span className="line-through text-slate-500 text-sm">$1130</span>
                     <span className="bg-educational-blue text-white font-bold px-2 py-0.5 rounded text-sm">$490</span>
                   </div>
                   <div className="flex items-center gap-2">

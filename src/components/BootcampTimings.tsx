@@ -38,7 +38,7 @@ const BootcampTimings: React.FC = () => {
   const ModeButton = ({ mode, label }) => (
     <button 
       onClick={() => handleModeToggle(mode)} 
-      className={`px-3 py-1 text-xs font-medium rounded-md ${activeMode === mode ? 'bg-white shadow-sm text-educational-blue' : 'text-gray-500 hover:text-educational-blue'}`}
+      className={`px-3 py-1 text-xs font-medium rounded-md whitespace-nowrap ${activeMode === mode ? 'bg-white shadow-sm text-educational-blue' : 'text-gray-500 hover:text-educational-blue'}`}
     >
       {label}
     </button>
@@ -80,12 +80,14 @@ const BootcampTimings: React.FC = () => {
           <div id="power-up-section" className="bootcamp-content">
             {/* Core Subject Workshop Section */}
             <div className="mb-12">
-              <div className="flex items-center mb-6">
-                <h2 className="text-xl font-semibold mr-4">Power Up Workshops</h2>
+              <div className="flex flex-col sm:flex-row sm:items-center mb-6 gap-3">
+                <h2 className="text-xl font-semibold">Power Up Workshops</h2>
                 {/* Mode Toggle */}
-                <div className="bg-gray-100 rounded-lg p-1 flex items-center">
-                  <ModeButton mode="online" label="Online Webinar" />
-                  <ModeButton mode="physical" label="Physical (Limited Slots)" />
+                <div className="inline-block">
+                  <div className="inline-flex bg-gray-100 rounded-lg p-1 items-center">
+                    <ModeButton mode="online" label="Online Webinar" />
+                    <ModeButton mode="physical" label="Physical (Limited Slots)" />
+                  </div>
                 </div>
               </div>
 
@@ -120,8 +122,14 @@ const BootcampTimings: React.FC = () => {
                         <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'online' ? '' : 'hidden'}`}>8:30am - 4:30pm</td>
                         <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'physical' ? '' : 'hidden'}`}>8:30am - 4:30pm</td>
                         <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>4-Jun (Wed)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>11-Jun (Wed)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>17-Jun (Tue)</td>
+                        <td className={`px-6 py-4 text-sm ${activeMode === 'physical' ? '' : 'hidden'}`}>
+                          <span className="text-red-500 font-medium">Sold Out</span>
+                          <span className="block text-gray-500 text-xs">11-Jun (Wed)</span>
+                        </td>
+                        <td className={`px-6 py-4 text-sm ${activeMode === 'physical' ? '' : 'hidden'}`}>
+                          <span className="text-red-500 font-medium">Sold Out</span>
+                          <span className="block text-gray-500 text-xs">17-Jun (Tue)</span>
+                        </td>
                       </tr>
                       {/* Maths */}
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
@@ -131,8 +139,14 @@ const BootcampTimings: React.FC = () => {
                         <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'online' ? '' : 'hidden'}`}>8:30am - 4:30pm</td>
                         <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'physical' ? '' : 'hidden'}`}>8:30am - 4:30pm</td>
                         <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>5-Jun (Thu)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>12-Jun (Thu)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>16-Jun (Mon)</td>
+                        <td className={`px-6 py-4 text-sm ${activeMode === 'physical' ? '' : 'hidden'}`}>
+                          <span className="text-red-500 font-medium">Sold Out</span>
+                          <span className="block text-gray-500 text-xs">12-Jun (Thu)</span>
+                        </td>
+                        <td className={`px-6 py-4 text-sm ${activeMode === 'physical' ? '' : 'hidden'}`}>
+                          <span className="text-red-500 font-medium">Sold Out</span>
+                          <span className="block text-gray-500 text-xs">16-Jun (Mon)</span>
+                        </td>
                       </tr>
                       {/* Science */}
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
@@ -142,8 +156,14 @@ const BootcampTimings: React.FC = () => {
                         <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'online' ? '' : 'hidden'}`}>8:30am - 4:30pm</td>
                         <td className={`px-6 py-4 text-sm text-gray-600 ${activeMode === 'physical' ? '' : 'hidden'}`}>8:30am - 4:30pm</td>
                         <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'online' ? '' : 'hidden'}`}>3-Jun (Tue)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>10-Jun (Tue)</td>
-                        <td className={`px-6 py-4 text-sm text-blue-600 font-medium ${activeMode === 'physical' ? '' : 'hidden'}`}>18-Jun (Wed)</td>
+                        <td className={`px-6 py-4 text-sm ${activeMode === 'physical' ? '' : 'hidden'}`}>
+                          <span className="text-red-500 font-medium">Sold Out</span>
+                          <span className="block text-gray-500 text-xs">10-Jun (Tue)</span>
+                        </td>
+                        <td className={`px-6 py-4 text-sm ${activeMode === 'physical' ? '' : 'hidden'}`}>
+                          <span className="text-red-500 font-medium">Sold Out</span>
+                          <span className="block text-gray-500 text-xs">18-Jun (Wed)</span>
+                        </td>
                       </tr>
                       {/* Chinese */}
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">

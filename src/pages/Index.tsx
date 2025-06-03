@@ -243,12 +243,7 @@ const Index = () => {
               >
                 Schedules
               </button>
-              <button 
-                onClick={() => scrollToSection('pricing')} 
-                className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
-              >
-                Pricing
-              </button>
+              {/* Pricing button removed as requested */}
               <button 
                 onClick={() => scrollToSection('teachers')} 
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"

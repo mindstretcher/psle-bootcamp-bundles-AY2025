@@ -20,10 +20,12 @@ const HeroSection = () => {
         <div className="mb-6 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
           <Badge 
             variant="outline" 
-            className={`py-1.5 px-3 md:py-2 md:px-4 text-sm md:text-base font-medium bg-blue-50 border-blue-200 text-educational-blue rounded-full inline-flex items-center gap-1 md:gap-1.5 ${isMobile ? 'flex-wrap justify-center' : ''}`}
+            className="py-1.5 px-3 md:py-2 md:px-4 text-sm md:text-base font-medium bg-blue-50 border-blue-200 text-educational-blue rounded-full inline-flex items-center gap-1 md:gap-1.5"
           >
-            <Info className="h-3.5 w-3.5 md:h-4 md:w-4" /> 
-            Bundles have ended, but the PSLE journey continues – <b>Power Up, Oral & Last Lap Bootcamps</b>
+            <Info className="h-3.5 w-3.5 md:h-4 md:w-4 flex-shrink-0" />
+            <span>
+              Bundles have ended, but the PSLE journey continues – <b>Power Up, Oral & Last Lap Bootcamps</b>
+            </span>
           </Badge>
         </div>
         
