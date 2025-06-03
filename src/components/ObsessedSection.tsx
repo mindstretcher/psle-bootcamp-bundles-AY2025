@@ -12,13 +12,13 @@ const ObsessedSection = () => {
   }, {
     icon: <Users className="h-6 w-6 text-educational-blue" />,
     title: "Physical & Online Webinar Formats",
-    description: "This year, we’re reintroducing our physical bootcamp format for PSLE Power Up, blending lecture-style teaching with smaller group segments for more interaction, where students can ask questions, participate in discussions and receive support effectively."
+    description: "Our hybrid Oral bootcamps combine live online sessions with 1-1 physical mock exams — designed to maximise each student’s learning."
   }, {
     icon: <Award className="h-6 w-6 text-educational-blue" />,
     title: "Highly-Experienced PSLE Master Teachers",
     description: "Our PSLE Master Teachers have guided numerous students to AL1 with their deep expertise in PSLE trends, marking schemes and proven exam-effective techniques."
   }];
-  return <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-white to-pastel-blue/30">
+  return <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-white/0 to-pastel-blue/30">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-educational-dark font-display">We're Obsessed About Getting You Ready For PSLE</h2>
         <p className="text-slate-600 text-center mb-16 max-w-3xl mx-auto">

@@ -65,7 +65,7 @@ const TeacherSection = () => {
   ];
 
   return (
-    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-white">
+    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-white to-blue-50/20">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-educational-dark font-display">
           Our Master Teachers

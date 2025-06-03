@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './BootcampTimings.css';
 
 // Format Badge Component
@@ -6,6 +6,16 @@ const FormatBadge = ({ format }) => (
   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 ml-2">
     {format}
   </span>
+);
+
+// Subject Icon Component
+const SubjectIcon = ({ initial, color, name }) => (
+  <div className="flex items-center">
+    <div className={`w-8 h-8 rounded-full flex items-center justify-center mr-2`} style={{ backgroundColor: `${color}15` }}>
+      <span className="text-xs font-semibold" style={{ color }}>{initial}</span>
+    </div>
+    <span className="font-medium">{name}</span>
+  </div>
 );
 
 const BootcampTimings: React.FC = () => {
@@ -23,47 +33,29 @@ const BootcampTimings: React.FC = () => {
     setActiveMode(mode);
   };
 
-  const SubjectIcon = ({ initial, color, name }) => (
-    <div className="flex items-center">
-      <span
-        className="h-8 w-8 rounded-full flex items-center justify-center text-white font-medium text-xs"
-        style={{ backgroundColor: color }}
-      >
-        {initial}
-      </span>
-      <span className="ml-3 font-medium">{name}</span>
-    </div>
-  );
+  // SubjectIcon component is already defined above
 
-  const TabButton = ({ id, label }) => (
-    <button
-      id={`${id}-tab`}
-      className={`tab-button px-6 py-3 text-sm font-medium transition ${
-        activeTab === id
-          ? 'border-b-2 border-blue-500 text-blue-600 active'
-          : 'text-gray-500 hover:text-gray-700'
-      }`}
-      onClick={() => setActiveTab(id)}
+  const ModeButton = ({ mode, label }) => (
+    <button 
+      onClick={() => handleModeToggle(mode)} 
+      className={`px-3 py-1 text-xs font-medium rounded-md ${activeMode === mode ? 'bg-white shadow-sm text-educational-blue' : 'text-gray-500 hover:text-educational-blue'}`}
     >
       {label}
     </button>
   );
 
-  const ModeButton = ({ mode, label }) => (
-    <button
-      className={`mode-button px-4 py-1.5 rounded-md text-sm font-medium transition ${
-        activeMode === mode
-          ? 'bg-white shadow text-blue-600 active'
-          : 'text-gray-500'
-      }`}
-      onClick={() => setActiveMode(mode)}
+  // Tab Button Component
+  const TabButton = ({ id, label }) => (
+    <button 
+      onClick={() => handleTabClick(id)} 
+      className={`px-4 py-2 text-sm font-medium ${activeTab === id ? 'text-educational-blue border-b-2 border-educational-blue' : 'text-gray-500 hover:text-educational-blue'}`}
     >
       {label}
     </button>
   );
 
   return (
-    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-slate-50">
+    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-blue-50/30 to-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Bootcamp Dates & Timings</h1>
@@ -76,15 +68,13 @@ const BootcampTimings: React.FC = () => {
         <div className="tabs-container mb-8 overflow-x-auto">
           <div className="flex justify-center border-b border-gray-200 min-w-max">
             <TabButton id="power-up" label="Power Up" />
-            <TabButton id="last-lap" label="Last Lap" />
             <TabButton id="english-oral" label="English Oral" />
             <TabButton id="chinese-oral" label="Chinese Oral" />
-            <TabButton id="qa-consults" label="Q&A Consults" />
+            <TabButton id="last-lap" label="Last Lap" />
           </div>
         </div>
 
         {/* --- Content Sections --- */}
-
         {/* Power Up Section */}
         {activeTab === 'power-up' && (
           <div id="power-up-section" className="bootcamp-content">
@@ -110,7 +100,7 @@ const BootcampTimings: React.FC = () => {
 
               <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
                 <div className="table-container overflow-x-auto">
-                  <table className="w-full min-w-[600px"> {/* Added min-width for smaller screens */}
+                  <table className="w-full min-w-[600px]"> {/* Added min-width for smaller screens */}
                     <thead>
                       <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
                         <th className="px-6 py-4 font-medium col-subject">Subject</th>
@@ -280,66 +270,7 @@ const BootcampTimings: React.FC = () => {
             </div>
           </div>
         )}
-
-        {/* Last Lap Section */}
-        {activeTab === 'last-lap' && (
-          <div id="last-lap-section" className="bootcamp-content">
-            <div className="mb-12">
-              <h2 className="text-xl font-semibold mb-6">Last Lap Workshops <FormatBadge format="Online Webinar" /></h2>
-              <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
-                <div className="table-container overflow-x-auto">
-                  <table className="w-full min-w-[500px]">
-                    <thead>
-                      <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
-                        <th className="px-6 py-4 font-medium col-subject">Subject</th>
-                        <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                        <th className="px-6 py-4 font-medium col-date">Only Run</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                        <td className="px-6 py-4">
-                          <SubjectIcon initial="E" color="#3b82f6" name="English" />
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 4:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">10-Sep (Wed)</td>
-                      </tr>
-                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                        <td className="px-6 py-4">
-                          <SubjectIcon initial="M" color="#ec4899" name="Maths" />
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 4:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">11-Sep (Thu)</td>
-                      </tr>
-                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                        <td className="px-6 py-4">
-                          <SubjectIcon initial="S" color="#10b981" name="Science" />
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 4:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">9-Sep (Tue)</td>
-                      </tr>
-                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
-                        <td className="px-6 py-4">
-                          <SubjectIcon initial="C" color="#f59e0b" name="Chinese" />
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 4:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">8-Sep (Mon)</td>
-                      </tr>
-                      <tr className="hover:bg-gray-50 transition">
-                        <td className="px-6 py-4">
-                          <SubjectIcon initial="HC" color="#8b5cf6" name="Higher Chinese" />
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 12pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">12-Sep (Fri)</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
+        
         {/* English Oral Section */}
         {activeTab === 'english-oral' && (
           <div id="english-oral-section" className="bootcamp-content">
@@ -525,24 +456,19 @@ const BootcampTimings: React.FC = () => {
           </div>
         )}
 
-        {/* Q&A Consults Section */}
-        {activeTab === 'qa-consults' && (
-          <div id="qa-consults-section" className="bootcamp-content">
+        {/* Last Lap Section */}
+        {activeTab === 'last-lap' && (
+          <div id="last-lap-section" className="bootcamp-content">
             <div className="mb-12">
-              <h2 className="text-xl font-semibold mb-6">Q&A Consultations <FormatBadge format="Online Webinar" /></h2>
-              <div className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
-                <p>
-                  <span className="font-medium">Note:</span> Q&A Consultations are complimentary as part of any Bootcamp Bundles.
-                </p>
-              </div>
+              <h2 className="text-xl font-semibold mb-6">Last Lap Workshops <FormatBadge format="Online Webinar" /></h2>
               <div className="section-card bg-white rounded-xl overflow-hidden border border-gray-100">
                 <div className="table-container overflow-x-auto">
-                  <table className="w-full min-w-[400px]">
+                  <table className="w-full min-w-[500px]">
                     <thead>
                       <tr className="text-left text-xs text-gray-500 border-b border-gray-100">
                         <th className="px-6 py-4 font-medium col-subject">Subject</th>
                         <th className="px-6 py-4 font-medium col-timing">Timing</th>
-                        <th className="px-6 py-4 font-medium col-date">Date</th>
+                        <th className="px-6 py-4 font-medium col-date">Only Run</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -550,29 +476,36 @@ const BootcampTimings: React.FC = () => {
                         <td className="px-6 py-4">
                           <SubjectIcon initial="E" color="#3b82f6" name="English" />
                         </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">19 Sep (Fri)</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 4:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">10-Sep (Wed)</td>
                       </tr>
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                         <td className="px-6 py-4">
                           <SubjectIcon initial="M" color="#ec4899" name="Maths" />
                         </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">18 Sep (Thu)</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 4:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">11-Sep (Thu)</td>
                       </tr>
                       <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                         <td className="px-6 py-4">
                           <SubjectIcon initial="S" color="#10b981" name="Science" />
                         </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">15 Sep (Mon)</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 4:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">9-Sep (Tue)</td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition">
+                      <tr className="hover:bg-gray-50 border-b border-gray-50 transition">
                         <td className="px-6 py-4">
                           <SubjectIcon initial="C" color="#f59e0b" name="Chinese" />
                         </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">7pm - 9:30pm</td>
-                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">17 Sep (Wed)</td>
+                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 4:30pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">8-Sep (Mon)</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition">
+                        <td className="px-6 py-4">
+                          <SubjectIcon initial="HC" color="#8b5cf6" name="Higher Chinese" />
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-600">8:30am - 12:00pm</td>
+                        <td className="px-6 py-4 text-sm text-blue-600 font-medium">12-Sep (Fri)</td>
                       </tr>
                     </tbody>
                   </table>

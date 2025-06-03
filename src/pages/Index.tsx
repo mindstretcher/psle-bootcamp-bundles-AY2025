@@ -132,12 +132,7 @@ const Index = () => {
               >
                 Schedules
               </button>
-              <button 
-                onClick={() => scrollToSection('pricing')} 
-                className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
-              >
-                Pricing
-              </button>
+              {/* Pricing section removed as bundle sales are over */}
               <button 
                 onClick={() => scrollToSection('teachers')} 
                 className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
@@ -174,32 +169,29 @@ const Index = () => {
         <VideoSection />
         
         {/* "We're Obsessed" Section */}
-        <section id="why-it-works" className="pt-8">
+        <section id="why-it-works" className="pt-0">
           <ObsessedSection />
         </section>
         
         {/* Bootcamp Details Section */}
-        <section id="bootcamp-bundles" className="pt-8">
+        <section id="bootcamp-bundles" className="pt-0">
           <BootcampSection />
         </section>
         
         {/* Bootcamp Dates & Timings Section */}
-        <section id="schedules" className="pt-8">
+        <section id="schedules" className="pt-0">
           <BootcampTimings />
         </section>
         
-        {/* Pricing Section */}
-        <section id="pricing" className="pt-8">
-          <PricingSection />
-        </section>
+        {/* Pricing Section removed as bundle sales are over */}
         
         {/* Teachers Section */}
-        <section id="teachers" className="pt-8">
+        <section id="teachers" className="pt-0">
           <TeacherSection />
         </section>
         
         {/* FAQ Section */}
-        <section id="faq" className="pt-8">
+        <section id="faq" className="pt-0">
           <FAQSection />
         </section>
         
