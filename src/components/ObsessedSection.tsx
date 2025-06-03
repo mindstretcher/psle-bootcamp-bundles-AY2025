@@ -53,6 +53,6 @@ const ObsessedSection = () => {
         </div>
       </div>
     </section>
-  );
+  
 };
 export default ObsessedSection;
