@@ -1,33 +1,23 @@
 import { Award, BookOpen, Sparkles, Users } from "lucide-react";
 const ObsessedSection = () => {
-  const features = [
-    {
-      icon: <Sparkles className="h-6 w-6 text-educational-blue" />,
-      title: "Master Essential PSLE Skills & Techniques",
-      description:
-        "Our bootcamps cover all key PSLE content, skills and techniques you need to master for PSLE success. This includes revising key PSLE concepts, and engaging in rigorous drills and practices which exposes you to commonly-tested PSLE questions.",
-    },
-    {
-      icon: <BookOpen className="h-6 w-6 text-educational-blue" />,
-      title: "Latest 2025 PSLE Bootcamp Materials",
-      description:
-        "Our 2025 PSLE Bootcamp materials have been refreshed with new materials, and also updated to align with 2025 MOE syllabus changes. These materials are designed to help conquer weaknesses and prepare students well for the PSLE.",
-    },
-    {
-      icon: <Users className="h-6 w-6 text-educational-blue" />,
-      title: "Physical & Online Webinar Formats",
-      description:
-        "Both our online & physical bootcamp bundles give you full access to the same proven strategies, master teachers and PSLE content to succeed.",
-    },
-    {
-      icon: <Award className="h-6 w-6 text-educational-blue" />,
-      title: "Highly-Experienced PSLE Master Teachers",
-      description:
-        "Our PSLE Master Teachers have guided numerous students to AL1 with their deep expertise in PSLE trends, marking schemes and proven exam-effective techniques.",
-    },
-  ];
-  return (
-    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-white to-pastel-blue/30">
+  const features = [{
+    icon: <Sparkles className="h-6 w-6 text-educational-blue" />,
+    title: "Master Essential PSLE Skills & Techniques",
+    description: "Our bootcamps cover all key PSLE content, skills and techniques you need to master for PSLE success. This includes revising key PSLE concepts, and engaging in rigorous drills and practices which exposes you to commonly-tested PSLE questions."
+  }, {
+    icon: <BookOpen className="h-6 w-6 text-educational-blue" />,
+    title: "Latest 2025 PSLE Bootcamp Materials",
+    description: "Our 2025 PSLE Bootcamp materials have been refreshed with new materials, and also updated to align with 2025 MOE syllabus changes. These materials are designed to help conquer weaknesses and prepare students well for the PSLE."
+  }, {
+    icon: <Users className="h-6 w-6 text-educational-blue" />,
+    title: "Physical & Online Webinar Formats",
+    description: "Our hybrid Oral bootcamps combine live online sessions with 1-1 physical mock exams — designed to maximise each student’s learning."
+  }, {
+    icon: <Award className="h-6 w-6 text-educational-blue" />,
+    title: "Highly-Experienced PSLE Master Teachers",
+    description: "Our PSLE Master Teachers have guided numerous students to AL1 with their deep expertise in PSLE trends, marking schemes and proven exam-effective techniques."
+  }];
+  return <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-white/0 to-pastel-blue/30">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-educational-dark font-display">
           We're Obsessed About Getting You Ready For PSLE
@@ -63,6 +53,6 @@ const ObsessedSection = () => {
         </div>
       </div>
     </section>
-  );
+  
 };
 export default ObsessedSection;

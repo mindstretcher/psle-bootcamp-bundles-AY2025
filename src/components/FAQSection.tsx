@@ -5,42 +5,18 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 const FAQSection = () => {
   const faqs = [
     {
-      question: "What perks are included when I sign up for a Bootcamp Bundle?",
+      question: "Are our PSLE Bootcamp Bundles still available?",
       answer: (
         <div>
-          <p>When you register for any Bootcamp Bundles, you'll receive a range of useful resources to support your child's PSLE preparation:</p>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li><strong>Bundle Discount Savings:</strong> Enjoy 15-25% off, depending on the bundle selected (Standard, Booster and Mega).</li>
-            <li><strong>PSLE Revision Books:</strong> All bundles include the following 5 titles at no extra cost:
-              <ul className="list-circle pl-5 mt-1 space-y-1">
-                <li>Best A* Model Compositions (English)</li>
-                <li>Practice Papers for PSLE Maths</li>
-                <li>PSLE Mathematics - Concepts & Strategies Book</li>
-                <li>Tackling Science Open-ended Questions (Vol. 1 & 2)</li>
-              </ul>
-              <p className="mt-1"><strong>Booster and Mega Bundles Bonus:</strong> 3 additional English Oral titles as part of the PSLE English Oral SBC Workshops.</p>
-              <ul className="list-circle pl-5 mt-1 space-y-1">
-                <li>Mastering PSLE Reading Aloud</li>
-                <li>English Oral SBC Vol. 1 (Title TBC)</li>
-                <li>English Oral SBC Vol. 2 (Title TBC)</li>
-              </ul>
-            </li>
-            <li><strong>PSLE Online Q&A Consultation:</strong> Live 2.5-hour subject-specific Q&A sessions in the week leading up to PSLE.</li>
-            <li><strong>PSLE Mock Papers:</strong> To assess readiness and build familiarity with PSLE exam formats.</li>
-            <li><strong>PSLE Study Planners & Checklists:</strong> 4-month PSLE Study Plan and Topic Checklists to keep students on track.</li>
-          </ul>
+          <p>The PSLE Bootcamp Bundles (which included Power Up, Oral & Last Lap bootcamps) are no longer available as the Power Up Bootcamp has already started. However, you can still sign up for the remaining Power Up sessions, as well as the upcoming English Oral, Chinese Oral and Last Lap Bootcamps individually — just scroll up to explore them.</p>
         </div>
       )
     },
     {
-      question: "Can I swap any of the subjects or bootcamps in the Bootcamp Bundles?",
+      question: "I previously purchased the bundles, where can I find information on my sessions?",
       answer: (
         <div>
-          <p><strong>Subject swap:</strong></p>
-          <p>The Standard Bundle comprises of 3 subjects: English, Maths, and Science. We are unable to accommodate any subject swaps. If you're interested in enrolling for Chinese and/or Higher Chinese, you may select the 4 Subjects or 5 Subjects option.</p>
-          
-          <p className="mt-2"><strong>Bootcamp swap:</strong></p>
-          <p>Similarly, for the Booster Bundle, we are unable to exchange English Oral Bootcamp for Chinese Oral Bootcamp. If you intend to select these 3 bootcamps – PSLE Power Up, PSLE Last Lap, and Chinese Oral – you may select the Mega Bundle option which includes all 4 bootcamps! Alternatively, you can purchase the Standard Bundle and the Chinese Oral Bootcamp as a separate standalone purchase.</p>
+          <p>Great! If you’ve already purchased a bundle, your access to all included sessions are confirmed. Just refer to the email confirmation we sent, or reach out to our Events Team at <a href="mailto:events@mindstretcher.com" className="text-blue-600 hover:underline">events@mindstretcher.com</a> if you need any help.</p>
         </div>
       )
     },
@@ -74,30 +50,19 @@ const FAQSection = () => {
           
           <p className="mt-2"><strong>For Physical (Power Up) Bootcamp students:</strong></p>
           <p>Your Power Up materials will be issued on the day of the physical bootcamp. For all other materials, you'll be notified via email when they're ready for collection.</p>
-          
-          <p className="mt-2">You can expect the first notification by mid-May. Keep an eye on your inbox — we'll remind you as soon as your materials are available!</p>
+
+          <p className="mt-2"><strong>Signing Up After The Collection Dates?</strong></p>
+          <p>No worries — we’ll still arrange for your child’s materials to be collected at your convenience. Just keep an eye on your inbox, we’ll notify you as soon as they’re ready!</p>
+        
         </div>
       )
     },
     {
-      question: "I need to change my bootcamp run timings from Run 2 (Tampines) to Run 3 (Toa Payoh), or vice versa. Can I still do so after registration?",
+      question: "I need to change my bootcamp run timings. Can I still do so after registration?",
       answer: (
         <div>
-          <p>Yes, you can request a change between the physical runs (Run 2 and Run 3), subject to availability.</p>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Simply email our Events Team at <a href="mailto:events@mindstretcher.com" className="text-blue-600 hover:underline">events@mindstretcher.com</a>, and we'll assist you as soon as possible.</li>
-            <li>Do note that the two runs are held at different venues, so please ensure you're able to make the necessary arrangements for your child to attend.</li>
-          </ul>
-          <p className="mt-2"><strong>Important note:</strong> As online and physical runs are priced differently, we're unable to accommodate switches between Run 1 (Online) and Runs 2 or 3 (Physical).</p>
-        </div>
-      )
-    },
-    {
-      question: "Can I mix online and physical formats for the PSLE Power Up Bootcamp?",
-      answer: (
-        <div>
-          <p>Our Bootcamp Bundle pricing applies only if all selected subjects for the Power Up Bootcamp are in the same format — either fully online or fully physical.</p>
-          <p className="mt-2">If you choose to mix formats (e.g. Science and Math physical, English and Chinese online), the fees will be calculated separately based on the respective 2-subject rates. You’ll also need to register for each format separately.</p>
+          <p>Yes, you can request a change between run timings, subject to availability. Simply email our Events Team at <a href="mailto:events@mindstretcher.com" className="text-blue-600 hover:underline">events@mindstretcher.com</a>, and we'll assist you as soon as possible.</p>
+          <p className="mt-2"><strong>Important note:</strong> For Power Up Bootcamp – as online and physical runs are priced differently, we're unable to accommodate switches between Run 1 (Online) and Runs 2 or 3 (Physical).</p>
         </div>
       )
     },
@@ -146,7 +111,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-slate-50">
+    <section id="faq" className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 bg-gradient-to-b from-blue-50/20 to-slate-50/60">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-educational-dark">
           Frequently Asked Questions

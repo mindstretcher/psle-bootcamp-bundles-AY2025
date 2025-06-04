@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ChevronRight, TrendingUp, BarChart, Award, Percent } from 'lucide-react';
+import { ChevronRight, TrendingUp, BarChart, Award, Info } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from '@/hooks/use-mobile';
 import { redirectToCheckout } from '@/lib/helper';
@@ -20,16 +20,17 @@ const HeroSection = () => {
         <div className="mb-6 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
           <Badge 
             variant="outline" 
-            className={`py-1.5 px-3 md:py-2 md:px-4 text-sm md:text-base font-medium bg-blue-50 border-blue-200 text-educational-blue rounded-full inline-flex items-center gap-1 md:gap-1.5 ${isMobile ? 'flex-wrap justify-center' : ''}`}
+            className="py-1.5 px-3 md:py-2 md:px-4 text-sm md:text-base font-medium bg-blue-50 border-blue-200 text-educational-blue rounded-full inline-flex items-center gap-1 md:gap-1.5"
           >
-            <Percent className="h-3.5 w-3.5 md:h-4 md:w-4" /> 
-            <b>Enjoy 15 to 25% off</b> with our Bootcamp Bundles 
-            <Percent className="h-3.5 w-3.5 md:h-4 md:w-4" />
+            <Info className="h-3.5 w-3.5 md:h-4 md:w-4 flex-shrink-0" />
+            <span>
+              Bundles have ended, but the PSLE journey continues – <b>Power Up, Oral & Last Lap Bootcamps</b>
+            </span>
           </Badge>
         </div>
         
         <p className="text-base md:text-lg lg:text-xl text-slate-600 mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-          Our four flagship PSLE Revision Bootcamps run from May to September to help students prepare for PSLE 2025. Over the years, thousands of P6 students have benefited from our focused revision and proven exam strategies and achieved outstanding PSLE results. Bundles are available till end June.
+          Our flagship PSLE Revision Bootcamps run till September to help students prepare for PSLE 2025. Over the years, thousands of P6 students have benefited from our focused revision and proven exam strategies and achieved outstanding PSLE results.
         </p>
         <Button 
           size="lg" 
