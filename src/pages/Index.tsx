@@ -6,11 +6,11 @@ import BootcampSection from '@/components/BootcampSection';
 import TeacherSection from '@/components/TeacherSection';
 import FAQSection from '@/components/FAQSection';
 import ObsessedSection from '@/components/ObsessedSection';
-import PricingSection from '@/components/PricingSection';
-import BootcampTimings from '@/components/BootcampTimings';
-import CountdownTimer from '@/components/CountdownTimer';
+import WaitlistBanner from '@/components/WaitlistBanner';
+import WaitlistSection from '@/components/WaitlistSection';
 import { ChevronRight } from 'lucide-react';
-import { redirectToCheckout } from '@/lib/helper';
+
+const WAITLIST_URL = 'https://sprw.io/stt-d7RnQ';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -93,9 +93,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <div className="sticky top-0 z-50 flex flex-col w-full">
-        {/* Countdown Timer */}
+        {/* 2026 Waitlist Banner */}
         <div className="w-full">
-          <CountdownTimer />
+          <WaitlistBanner />
         </div>
         
         {/* Navigation */}
@@ -120,19 +120,13 @@ const Index = () => {
               >
                 Why It Works
               </button>
-              <button 
-                onClick={() => scrollToSection('bootcamp-bundles')} 
+              <button
+                onClick={() => scrollToSection('bootcamp-bundles')}
                 className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
               >
                 Bootcamps
               </button>
-              <button 
-                onClick={() => scrollToSection('schedules')} 
-                className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
-              >
-                Schedules
-              </button>
-              {/* Pricing section removed as bundle sales are over */}
+              {/* Schedules and Pricing sections removed - 2026 details not ready yet */}
               <button 
                 onClick={() => scrollToSection('teachers')} 
                 className="text-slate-700 hover:text-educational-blue text-sm transition-colors"
@@ -148,13 +142,13 @@ const Index = () => {
             </div>
           </nav>
 
-          {/* Register Button */}
+          {/* Waitlist Button */}
           <div className="flex items-center">
-            <Button 
+            <Button
               className="bg-educational-blue hover:bg-blue-700"
-              onClick={() => redirectToCheckout()}
+              onClick={() => window.open(WAITLIST_URL, '_blank')}
             >
-              Register Now <ChevronRight className="ml-1 h-4 w-4" />
+              Join Waitlist <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -178,10 +172,7 @@ const Index = () => {
           <BootcampSection />
         </section>
         
-        {/* Bootcamp Dates & Timings Section */}
-        <section id="schedules" className="pt-0">
-          <BootcampTimings />
-        </section>
+        {/* Bootcamp Dates & Timings Section - Hidden until 2026 details are ready */}
         
         {/* Pricing Section removed as bundle sales are over */}
         
@@ -195,20 +186,8 @@ const Index = () => {
           <FAQSection />
         </section>
         
-        {/* Call to Action Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-educational-blue to-blue-600 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Ready to start your PSLE journey?</h2>
-            <p className="text-lg mb-8 text-blue-100">Secure your child's spot in our PSLE Bootcamp Bundles and set them up for PSLE success.</p>
-            <Button 
-              size="lg" 
-              className="bg-white text-educational-blue hover:bg-blue-50 transition-colors duration-300"
-              onClick={() => redirectToCheckout()}
-            >
-              Register Now <ChevronRight className="ml-1 h-5 w-5" />
-            </Button>
-          </div>
-        </section>
+        {/* Waitlist Section */}
+        <WaitlistSection />
       </main>
       
       {/* Simplified Footer */}
@@ -225,33 +204,26 @@ const Index = () => {
               </a>
             </div>
             <nav className="flex flex-wrap justify-center gap-6 mb-4 md:mb-0">
-              <button 
-                onClick={() => scrollToSection('why-it-works')} 
+              <button
+                onClick={() => scrollToSection('why-it-works')}
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Why It Works
               </button>
-              <button 
-                onClick={() => scrollToSection('bootcamp-bundles')} 
+              <button
+                onClick={() => scrollToSection('bootcamp-bundles')}
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Bootcamps
               </button>
-              <button 
-                onClick={() => scrollToSection('schedules')} 
-                className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
-              >
-                Schedules
-              </button>
-              {/* Pricing button removed as requested */}
-              <button 
-                onClick={() => scrollToSection('teachers')} 
+              <button
+                onClick={() => scrollToSection('teachers')}
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 Teachers
               </button>
-              <button 
-                onClick={() => scrollToSection('faq')} 
+              <button
+                onClick={() => scrollToSection('faq')}
                 className="text-slate-600 hover:text-educational-blue transition-colors text-sm"
               >
                 FAQ
