@@ -1,0 +1,10 @@
+# robots.txt for PSLE Bootcamps 2026 Landing Page
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.mindstretcher.com/journey-to-psle-bootcamp-bundles/sitemap.xml
+
+# Disallow admin and private paths
+Disallow: /admin/
+Disallow: /private/
